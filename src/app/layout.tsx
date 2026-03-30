@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TrackingPixel from "@/components/TrackingPixel";
 
 export const metadata: Metadata = {
   title: "Gründer Marketing | Mehr Alleinaufträge für Immobilienmakler",
@@ -39,6 +40,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <TrackingPixel />
         <Header />
         <main>{children}</main>
         <Footer />
