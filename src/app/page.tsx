@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import MarqueeBanner from "@/components/MarqueeBanner";
 import Challenges from "@/components/Challenges";
 import Solution from "@/components/Solution";
 import TargetGroup from "@/components/TargetGroup";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <MarqueeBanner />
       <Challenges />
       <Solution />
       <TargetGroup />
