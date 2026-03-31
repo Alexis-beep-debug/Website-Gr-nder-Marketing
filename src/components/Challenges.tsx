@@ -23,7 +23,7 @@ const challenges = [
 
 export default function Challenges() {
   return (
-    <section className="py-24 sm:py-32 bg-section-alt">
+    <section className="py-24 sm:py-32 bg-gradient-to-b from-[#faf8f5] to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -44,9 +44,9 @@ export default function Challenges() {
           {challenges.map((challenge, i) => (
             <div
               key={i}
-              className="bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="bg-white rounded-xl p-8 shadow-lg shadow-black/5 border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-5">
+              <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center text-accent mb-5">
                 {challenge.icon}
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">

@@ -38,7 +38,7 @@ export default function About() {
         {/* Founder Section */}
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center mb-16 sm:mb-24">
           <div className="relative">
-            <div className="bg-gradient-to-br from-primary to-primary-light rounded-2xl aspect-[4/5] overflow-hidden">
+            <div className="bg-gradient-to-br from-primary to-primary-light rounded-xl aspect-[4/5] overflow-hidden">
               <img
                 src="/images/team/malte-gruender.jpeg"
                 alt="Malte-Valentin Gründer – Gründer & Geschäftsführer von Gründer Marketing"
@@ -46,7 +46,7 @@ export default function About() {
               />
             </div>
             {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-2xl -z-10" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-xl -z-10" />
           </div>
 
           {/* Text */}
@@ -75,7 +75,7 @@ export default function About() {
         </div>
 
         {/* Mission */}
-        <div className="bg-accent/[0.06] border border-accent/15 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-14 text-center mb-14 sm:mb-20">
+        <div className="bg-accent/[0.06] border border-accent/15 rounded-xl sm:rounded-xl p-6 sm:p-10 md:p-14 text-center mb-14 sm:mb-20">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">
             Unsere Mission
           </span>
@@ -106,7 +106,7 @@ export default function About() {
           {qualities.map((q, i) => (
             <div
               key={i}
-              className="bg-card rounded-2xl p-8 shadow-lg shadow-black/5 border border-black/5 hover:shadow-xl transition-all duration-300 group"
+              className="bg-card rounded-xl p-8 shadow-lg shadow-black/5 border border-black/5 hover:shadow-xl transition-all duration-300 group"
             >
               <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-5 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                 {q.icon}

@@ -65,7 +65,7 @@ export default function OrbitShowcase() {
                   <div className="animate-orbit-counter -translate-x-1/2 -translate-y-1/2">
                     <div className="group relative">
                       {/* Card */}
-                      <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white rounded-xl sm:rounded-2xl shadow-lg shadow-primary/6 border border-primary/5 flex flex-col items-center justify-center gap-0.5 sm:gap-1 transition-all group-hover:shadow-xl group-hover:scale-110 group-hover:border-accent/30 cursor-pointer">
+                      <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white rounded-xl sm:rounded-xl shadow-lg shadow-primary/6 border border-primary/5 flex flex-col items-center justify-center gap-0.5 sm:gap-1 transition-all group-hover:shadow-xl group-hover:scale-110 group-hover:border-accent/30 cursor-pointer">
                         {/* Placeholder icon */}
                         <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-accent/10 rounded-md sm:rounded-lg flex items-center justify-center">
                           <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">

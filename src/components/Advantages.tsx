@@ -47,7 +47,7 @@ const advantages = [
 
 export default function Advantages() {
   return (
-    <section className="py-24 sm:py-32 bg-white">
+    <section className="py-24 sm:py-32 bg-gradient-to-b from-white to-accent/[0.03]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
@@ -76,12 +76,12 @@ export default function Advantages() {
           {advantages.map((adv) => (
             <div
               key={adv.number}
-              className="relative bg-light rounded-2xl p-7 border border-black/5 hover:border-accent/30 transition-all duration-300 group"
+              className="relative bg-white rounded-xl p-7 border border-black/5 hover:border-accent/30 transition-all duration-300 group shadow-sm"
             >
               <div className="absolute top-5 right-5 text-3xl font-bold text-accent/8">
                 {adv.number}
               </div>
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-5 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent mb-5 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                 {adv.icon}
               </div>
               <h3 className="font-semibold text-primary text-sm leading-snug mb-2">

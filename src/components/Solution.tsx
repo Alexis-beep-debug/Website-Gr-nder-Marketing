@@ -58,13 +58,13 @@ export default function Solution() {
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, i) => (
             <div key={i} className="relative group">
-              <div className="bg-light rounded-2xl p-8 h-full border border-black/5 hover:border-accent/30 transition-all duration-300 hover:shadow-lg">
+              <div className="bg-light rounded-xl p-8 h-full border border-black/5 hover:border-accent/30 transition-all duration-300 hover:shadow-lg">
                 {/* Number */}
                 <span className="text-5xl font-extrabold text-accent/15 absolute top-6 right-6">
                   {step.number}
                 </span>
                 {/* Icon */}
-                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-5 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent mb-5 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   {step.icon}
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">

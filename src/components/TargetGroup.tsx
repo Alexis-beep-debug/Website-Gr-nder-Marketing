@@ -104,7 +104,7 @@ export default function TargetGroup() {
             return (
               <div
                 key={target.id}
-                className={`border rounded-2xl transition-all duration-300 ${
+                className={`border rounded-xl transition-all duration-300 ${
                   isOpen
                     ? "border-accent/30 bg-accent/[0.02] shadow-lg shadow-accent/5"
                     : "border-primary/8 bg-white hover:border-primary/15"

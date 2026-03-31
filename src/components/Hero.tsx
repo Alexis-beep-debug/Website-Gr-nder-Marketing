@@ -63,7 +63,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-400">
               <a
                 href="#kontakt"
-                className="group inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/85 text-white px-8 py-4 rounded-xl text-base font-semibold transition-all hover:shadow-xl hover:shadow-primary/15 hover:-translate-y-0.5"
+                className="group inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/85 text-white px-8 py-4 rounded-lg text-base font-semibold transition-all hover:shadow-xl hover:shadow-primary/15 hover:-translate-y-0.5"
               >
                 Kostenloses Erstgespräch
                 <svg
@@ -78,7 +78,7 @@ export default function Hero() {
               </a>
               <a
                 href="#loesung"
-                className="inline-flex items-center justify-center gap-2 border border-primary/12 text-primary/60 hover:border-accent hover:text-accent px-8 py-4 rounded-xl text-base font-semibold transition-all"
+                className="inline-flex items-center justify-center gap-2 border border-primary/12 text-primary/60 hover:border-accent hover:text-accent px-8 py-4 rounded-lg text-base font-semibold transition-all"
               >
                 Wie es funktioniert
               </a>
@@ -111,7 +111,7 @@ export default function Hero() {
             <div className="relative w-full max-w-sm lg:max-w-none">
 
               {/* Malte photo */}
-              <div className="aspect-[3/4] bg-section-alt rounded-2xl overflow-hidden relative shadow-2xl shadow-primary/8">
+              <div className="aspect-[3/4] bg-section-alt rounded-lg overflow-hidden relative shadow-2xl shadow-primary/8">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-accent z-10" />
                 <img
                   src="/images/team/malte-gruender.jpeg"
@@ -121,7 +121,7 @@ export default function Hero() {
               </div>
 
               {/* Floating card – bottom left: Google Review */}
-              <div className="absolute -bottom-4 -left-3 sm:-bottom-5 sm:-left-8 bg-white rounded-xl shadow-lg shadow-primary/8 px-3 py-2.5 sm:px-4 sm:py-3.5 flex items-center gap-2 sm:gap-3 border border-primary/5">
+              <div className="absolute -bottom-4 -left-3 sm:-bottom-5 sm:-left-8 bg-white rounded-lg shadow-lg shadow-primary/8 px-3 py-2.5 sm:px-4 sm:py-3.5 flex items-center gap-2 sm:gap-3 border border-primary/5">
                 <div className="w-9 h-9 shrink-0 flex items-center justify-center">
                   <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
@@ -143,7 +143,7 @@ export default function Hero() {
               </div>
 
               {/* Floating card – top right */}
-              <div className="absolute -top-4 -right-3 sm:-top-5 sm:-right-8 bg-white rounded-xl shadow-lg shadow-primary/8 px-3 py-2.5 sm:px-4 sm:py-3.5 border border-primary/5 text-center z-20">
+              <div className="absolute -top-4 -right-3 sm:-top-5 sm:-right-8 bg-white rounded-lg shadow-lg shadow-primary/8 px-3 py-2.5 sm:px-4 sm:py-3.5 border border-primary/5 text-center z-20">
                 <p className="text-2xl font-bold text-accent leading-none">
                   +47
                 </p>
