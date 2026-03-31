@@ -116,7 +116,7 @@ export default function Testimonials() {
         {/* Link to Google */}
         <div className="text-center mt-10">
           <a
-            href="https://www.google.com/maps/place/Gr%C3%BCnder+Marketing"
+            href="https://www.google.com/maps/place/Gr%C3%BCnder+Marketing/@51.175807,10.4541194,6z"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-light font-medium transition-colors"
