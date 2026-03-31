@@ -11,7 +11,7 @@ const orbitItems = [
 
 export default function OrbitShowcase() {
   return (
-    <section className="relative bg-section-alt py-24 sm:py-32 overflow-hidden">
+    <section className="relative bg-[#f0f5f3] py-24 sm:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}

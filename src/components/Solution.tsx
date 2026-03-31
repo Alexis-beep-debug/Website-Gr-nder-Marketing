@@ -37,7 +37,7 @@ const steps = [
 
 export default function Solution() {
   return (
-    <section id="loesung" className="py-24 sm:py-32 bg-white">
+    <section id="loesung" className="py-24 sm:py-32 bg-[#f0f5f3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">

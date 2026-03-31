@@ -1,6 +1,6 @@
 export default function CTA() {
   return (
-    <section id="kontakt" className="py-24 sm:py-32 bg-section-alt">
+    <section id="kontakt" className="py-24 sm:py-32 bg-[#faf8f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-accent/[0.06] border border-accent/15 rounded-lg p-6 sm:p-10 md:p-16 text-center relative overflow-hidden">
           {/* Decorative circles */}

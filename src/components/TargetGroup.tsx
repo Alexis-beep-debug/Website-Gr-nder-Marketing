@@ -72,7 +72,7 @@ export default function TargetGroup() {
   const [openId, setOpenId] = useState<string | null>("makler");
 
   return (
-    <section className="py-24 sm:py-32 bg-white">
+    <section className="py-24 sm:py-32 bg-[#faf8f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}

@@ -53,15 +53,15 @@ const stats = [
 
 export default function AnimatedCounter() {
   return (
-    <section className="py-16 sm:py-20 bg-accent/[0.06] border-y border-accent/10">
+    <section className="py-16 sm:py-20 bg-[#2a3f37]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-2">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
                 <Counter target={stat.value} suffix={stat.suffix} />
               </div>
-              <p className="text-xs sm:text-sm text-primary/45 font-medium uppercase tracking-wider">
+              <p className="text-xs sm:text-sm text-white/50 font-medium uppercase tracking-wider">
                 {stat.label}
               </p>
             </div>

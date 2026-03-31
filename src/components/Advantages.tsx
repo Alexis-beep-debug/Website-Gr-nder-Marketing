@@ -47,7 +47,7 @@ const advantages = [
 
 export default function Advantages() {
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-b from-white to-accent/[0.03]">
+    <section className="py-24 sm:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}

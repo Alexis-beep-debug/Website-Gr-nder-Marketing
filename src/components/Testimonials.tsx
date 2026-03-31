@@ -49,7 +49,7 @@ function Stars({ count }: { count: number }) {
 
 export default function Testimonials() {
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-b from-white to-accent/[0.04]">
+    <section className="py-24 sm:py-32 bg-[#faf8f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
