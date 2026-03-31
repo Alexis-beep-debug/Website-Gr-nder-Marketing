@@ -144,17 +144,14 @@ export default function Hero() {
           <div className="order-1 lg:order-2 relative flex items-center justify-center animate-fade-in">
             <div className="relative w-full max-w-sm lg:max-w-none">
 
-              {/* Main photo placeholder */}
+              {/* Malte photo */}
               <div className="aspect-[3/4] bg-section-alt rounded-2xl overflow-hidden relative shadow-2xl shadow-primary/8">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-primary/20 p-8">
-                  <svg className="w-14 h-14 opacity-25" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                  </svg>
-                  <p className="text-sm text-center font-medium opacity-40">
-                    Foto von Malte-Valentin Gründer
-                  </p>
-                </div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-accent z-10" />
+                <img
+                  src="/images/team/malte-gruender.jpeg"
+                  alt="Malte-Valentin Gründer – Gründer Marketing"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating card – bottom left */}

@@ -7,20 +7,44 @@
 | **Projekt** | Redesign der Website für Gründer Marketing |
 | **Kunde** | Malte-Valentin Gründer |
 | **Firma** | Gründer Marketing |
-| **Domain** | marketing-gruender.de |
+| **Domain** | marketing-gruender.de / www.marketing-gruender.de |
 | **Zielgruppe** | Immobilienmakler, Bauträger, Verwaltungen |
-| **Status** | In Entwicklung |
+| **Repository** | alexis-beep-debug/Website-Gr-nder-Marketing |
+| **Branch** | claude/redesign-marketing-website-c7KKI |
+| **Status** | Live auf Railway |
 | **Stil-Inspiration** | growmelons.de, invate-media.de |
 
 ## Tech-Stack
 
 | Technologie | Version | Zweck |
 |------------|---------|-------|
-| **Next.js** | 16.x | React-Framework mit SSG |
+| **Next.js** | 16.x | React-Framework (Server-Mode für Railway) |
 | **React** | 19.x | UI-Bibliothek |
 | **TypeScript** | 6.x | Type-Safety |
 | **Tailwind CSS** | 4.x | Utility-first CSS |
 | **PostCSS** | 8.x | CSS-Processing |
+
+## Hosting & Deployment
+
+| Bereich | Details |
+|---------|---------|
+| **Hosting** | Railway |
+| **Railway-URL** | fkj0s59w.up.railway.app |
+| **Domain-Registrar** | IONOS |
+| **Deployment-Modus** | `next start` (Node-Server, kein Static Export) |
+| **SSL** | Automatisch über Railway (für www-Subdomain) |
+
+### DNS-Konfiguration (IONOS)
+
+| Typ | Hostname | Wert | Zweck |
+|-----|----------|------|-------|
+| CNAME | `www` | `fkj0s59w.up.railway.app` | Hauptdomain → Railway |
+| TXT | `_railway-verify.www` | `railway-verify=90c17f942d3e488550f4070ec...` | Railway-Verifizierung |
+
+### Domain-Weiterleitung (IONOS)
+
+- `marketing-gruender.de` → `https://www.marketing-gruender.de` (HTTP 301)
+- Alte A-Record (`217.160.0.159`) und AAAA-Record mussten entfernt werden
 
 ## Design-System
 
@@ -57,12 +81,19 @@
 | **Fade-In-Up** | Einganganimationen für Sektionsinhalte |
 | **prefers-reduced-motion** | Alle Animationen respektieren Barrierefreiheits-Einstellungen |
 
+### Bilder & Assets
+
+| Datei | Beschreibung |
+|-------|-------------|
+| `public/images/logos/logo.png` | Firmenlogo (verwendet in Header + Footer) |
+| `public/images/team/malte-gruender.jpeg` | Foto von Malte-Valentin Gründer (Hero + Über uns) |
+
 ## Seitenstruktur
 
 ### Startseite (Single-Page)
 
-1. **Header** – Sticky Navigation, transparent → weiß beim Scrollen
-2. **Hero** – Split-Layout (Text links, Foto-Placeholder rechts), scrollende Pill-Tags, Mixed Typography
+1. **Header** – Sticky Navigation mit echtem Logo, transparent → weiß beim Scrollen
+2. **Hero** – Split-Layout (Text links, Foto rechts), scrollende Pill-Tags, Mixed Typography
 3. **Marquee-Banner** – Dunkler Service-Ticker
 4. **Herausforderungen** – Zwei Karten: "Zu wenig Verkaufsobjekte" + "Fehlende Kaufinteressenten"
 5. **Lösung** – 3-Schritte-Prozess: Marktpräsenz → Kontaktanfragen → Wachstum
@@ -70,19 +101,19 @@
 7. **Leistungen** – 3 Service-Karten mit Features-Listen
 8. **Vorteile** – 4 Vorteile in kompakten Karten
 9. **Orbit-Showcase** – Kreisförmig rotierende Projekte (Platzhalter)
-10. **Über uns** – Gründer-Profil, Mission-Statement, 3 Qualitäts-Merkmale
+10. **Über uns** – Gründer-Profil mit echtem Foto, Mission-Statement, 3 Qualitäts-Merkmale
 11. **FAQ** – 5 aufklappbare Fragen mit Antworten
 12. **CTA** – Abschluss-Call-to-Action mit Telefon & E-Mail
-13. **Footer** – Navigation, Öffnungszeiten, Kontakt, Legal-Links
+13. **Footer** – Navigation, Öffnungszeiten, Kontakt, Legal-Links, echtes Logo
 
 ### Unterseiten
 
 | Route | Beschreibung | Status |
 |-------|-------------|--------|
-| `/impressum` | Impressum mit Unternehmensdaten | ✅ Fertig |
-| `/datenschutz` | Datenschutzerklärung (DSGVO-konform) | ✅ Fertig |
-| `/agb` | Allgemeine Geschäftsbedingungen (12 Klauseln) | ✅ Fertig |
-| `/dashboard` | KPI-Dashboard (passwortgeschützt) | ✅ Fertig |
+| `/impressum` | Impressum mit Unternehmensdaten | Fertig |
+| `/datenschutz` | Datenschutzerklärung (DSGVO-konform) | Fertig |
+| `/agb` | Allgemeine Geschäftsbedingungen (12 Klauseln) | Fertig |
+| `/dashboard` | KPI-Dashboard (passwortgeschützt) | Fertig |
 
 ## Komponenten-Übersicht
 
@@ -91,7 +122,7 @@
 | `src/app/layout.tsx` | Root-Layout mit Metadata, Fonts (Inter + Playfair Display), Header, Footer, Tracking-Pixel |
 | `src/app/page.tsx` | Hauptseite – bindet alle Sektionen ein |
 | `src/app/globals.css` | Tailwind-Imports, Theme-Variablen, Animationen (Fade, Marquee, Orbit, Shake) |
-| `src/components/Header.tsx` | Sticky Header – weiß/transparent adaptiv, Mobile-Menü |
+| `src/components/Header.tsx` | Sticky Header mit echtem Logo – adaptiv hell/dunkel, Mobile-Menü |
 | `src/components/Hero.tsx` | Hero mit scrollenden Pills, Mixed Typography, Split-Layout, Floating Cards |
 | `src/components/MarqueeBanner.tsx` | Dunkler Service-Ticker mit Endlos-Scroll |
 | `src/components/Challenges.tsx` | Problem-Karten |
@@ -100,10 +131,10 @@
 | `src/components/Services.tsx` | Leistungs-Karten mit Feature-Listen |
 | `src/components/Advantages.tsx` | Vorteile-Grid |
 | `src/components/OrbitShowcase.tsx` | Kreisförmig rotierende Projektkarten (CSS-Animation) |
-| `src/components/About.tsx` | Gründer-Profil, Mission, Qualitäten |
+| `src/components/About.tsx` | Gründer-Profil mit echtem Foto, Mission, Qualitäten |
 | `src/components/FAQ.tsx` | Akkordeon-FAQ |
 | `src/components/CTA.tsx` | Call-to-Action-Sektion |
-| `src/components/Footer.tsx` | Footer mit Kontakt & Legal |
+| `src/components/Footer.tsx` | Footer mit echtem Logo, Kontakt & Legal |
 | `src/components/TrackingPixel.tsx` | Client-Side Tracking (Seitenaufrufe, Klicks, Leads, UTM) |
 | `src/components/DashboardGuard.tsx` | Passwort-Login-Screen für Dashboard |
 | `src/lib/tracking.ts` | Tracking-Logik & Demo-Daten-Generator |
@@ -114,7 +145,7 @@
 |-------|-------------|
 | `src/app/impressum/page.tsx` | Impressum (§ 5 TMG) |
 | `src/app/datenschutz/page.tsx` | Datenschutzerklärung mit Service-Übersicht (Karten), Rechtsgrundlagen (Tags) |
-| `src/app/agb/page.tsx` | AGB – 12 nummerierte Klauseln mit Gold-Nummern und Highlight-Typografie |
+| `src/app/agb/page.tsx` | AGB – 12 nummerierte Klauseln mit Highlight-Typografie |
 
 ### Dashboard
 
@@ -158,19 +189,32 @@
 - Beschreibende Meta-Description
 - Keywords für Immobilienmakler-Marketing
 - Responsive Design (Mobile-first)
-- Performante Ladezeiten durch Static Export
 - Dashboard auf `noindex, nofollow` gesetzt
 
-## Deployment
+## Changelog
 
-- **Output:** Static Export (`next build` → `/out`)
-- **Konfiguration:** `next.config.ts`
+| Datum | Änderung |
+|-------|----------|
+| 31.03.2026 | Initiales Projekt-Setup: Next.js 16, React 19, TypeScript, Tailwind CSS 4 |
+| 31.03.2026 | Alle Sektionen erstellt (Hero, Challenges, Solution, TargetGroup, Services, Advantages, About, FAQ, CTA, Footer) |
+| 31.03.2026 | Fix: `output: "export"` aus `next.config.ts` entfernt – Railway benötigt Node-Server (`next start`) statt Static Export |
+| 31.03.2026 | DNS-Konfiguration bei IONOS: CNAME für www → Railway, TXT für Railway-Verifizierung |
+| 31.03.2026 | Domain-Weiterleitung bei IONOS: marketing-gruender.de → https://www.marketing-gruender.de (301) |
+| 31.03.2026 | SSL-Hinweis: Weiterleitung muss auf https:// zeigen, Railway stellt SSL-Zertifikat automatisch aus |
+| 31.03.2026 | Logo und Foto von Malte-Valentin Gründer eingebunden |
+| 31.03.2026 | Brandfarben aktualisiert: Schwarz/Grün/Weiß (vorher Navy/Gold) |
+| 31.03.2026 | Playfair Display als Akzent-Schrift für hervorgehobene Wörter |
+| 31.03.2026 | Hero-Redesign: Split-Layout, scrollende Pills, Mixed Typography |
+| 31.03.2026 | Motion-Design: Marquee-Banner, Orbit-Showcase |
+| 31.03.2026 | Legal-Seiten: Impressum, Datenschutz, AGB erstellt |
+| 31.03.2026 | KPI-Dashboard mit Passwortschutz und Tracking-Pixel |
 
 ## Offene Punkte / TODOs
 
-- [ ] Echtes Foto von Malte-Valentin Gründer einbinden (Hero + Über uns)
+- [ ] SSL: Weiterleitung bei IONOS auf `https://www.marketing-gruender.de` prüfen
 - [ ] Echte Projektbilder für Orbit-Showcase nachliefern
-- [ ] Firmenlogo einbinden (aktuell Text-Logo)
+- [x] Echtes Foto von Malte-Valentin Gründer einbinden
+- [x] Firmenlogo einbinden
 - [x] Impressum-Seite erstellen
 - [x] Datenschutzerklärung-Seite erstellen
 - [x] AGB-Seite erstellen

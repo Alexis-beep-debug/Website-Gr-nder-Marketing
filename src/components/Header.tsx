@@ -33,22 +33,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 bg-accent rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-            <span className="text-white font-bold text-base">G</span>
-          </div>
-          <div className="leading-tight">
-            <span
-              className={`font-bold text-base block transition-colors ${
-                isLight ? "text-primary" : "text-white"
-              }`}
-            >
-              Gründer
-            </span>
-            <span className="text-accent text-[10px] font-semibold tracking-widest uppercase">
-              Marketing
-            </span>
-          </div>
+        <a href="#hero" className="group">
+          <img
+            src="/images/logos/logo.png"
+            alt="Gründer Marketing Logo"
+            className={`h-10 w-auto group-hover:scale-105 transition-all ${
+              isLight ? "" : "brightness-0 invert"
+            }`}
+          />
         </a>
 
         {/* Desktop Nav */}
