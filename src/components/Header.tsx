@@ -47,7 +47,9 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#kontakt"
+            href="https://calendly.com/business-gruender/analysegesprach-gruender-marketing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-accent hover:bg-accent-light text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5"
           >
             Erstgespräch sichern
@@ -88,7 +90,9 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#kontakt"
+              href="https://calendly.com/business-gruender/analysegesprach-gruender-marketing"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="bg-accent text-white px-6 py-3 rounded-lg text-center font-semibold mt-2"
             >

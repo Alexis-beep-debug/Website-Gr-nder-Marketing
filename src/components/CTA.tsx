@@ -24,7 +24,9 @@ export default function CTA() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+491754024912"
+                href="https://calendly.com/business-gruender/analysegesprach-gruender-marketing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-accent hover:bg-accent-light text-white px-6 sm:px-10 py-3.5 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all hover:shadow-xl hover:shadow-accent/30 flex items-center justify-center gap-3 w-full sm:w-auto"
               >
                 <svg
@@ -32,15 +34,15 @@ export default function CTA() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  strokeWidth={1.5}
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
                   />
                 </svg>
-                Jetzt anrufen
+                Termin buchen
               </a>
               <a
                 href="mailto:info@marketing-gruender.de"
