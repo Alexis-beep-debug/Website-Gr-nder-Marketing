@@ -116,7 +116,7 @@ export default function Testimonials() {
         {/* Link to Google */}
         <div className="text-center mt-10">
           <a
-            href="https://www.google.com/maps/place/Gr%C3%BCnder+Marketing/@51.0565441,5.1693921,6z/data=!4m12!1m2!2m1!1sGr%C3%BCnder+Marketing+Dresden!3m8!1s0x65eb207c49a244fd:0x25166d7d138ab4d0!8m2!3d51.175807!4d10.4541194!9m1!1b1!15sChpHcsO8bmRlciBNYXJrZXRpbmcgRHJlc2RlblocIhpncsO8bmRlciBtYXJrZXRpbmcgZHJlc2RlbpIBGmludGVybmV0X21hcmtldGluZ19zZXJ2aWNlmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDI1R1QyVnFTbTVrTW1nMFpHMVplRlZzY0dGaWJWazFaRmQ0YTJSclJSQULgAQD6AQQIABAn!16s%2Fg%2F11mslr4tdz?entry=ttu"
+            href="https://maps.app.goo.gl/8sYBb5gEUKHqZ4DX9"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-light font-medium transition-colors"
