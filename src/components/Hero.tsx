@@ -23,7 +23,7 @@ export default function Hero() {
             </div>
 
             {/* Headline – mixed typography */}
-            <h1 className="text-5xl sm:text-6xl lg:text-[3.6rem] xl:text-7xl font-bold text-primary leading-[1.08] mb-8 animate-fade-in-up">
+            <h1 className="text-[2.5rem] sm:text-6xl lg:text-[3.6rem] xl:text-7xl font-bold text-primary leading-[1.08] mb-6 sm:mb-8 animate-fade-in-up">
               Jeden Monat{" "}
               <br className="hidden sm:block" />
               neue{" "}
@@ -43,7 +43,7 @@ export default function Hero() {
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg text-primary/50 leading-relaxed mb-10 max-w-xl animate-fade-in-up animation-delay-200">
+            <p className="text-base sm:text-lg text-primary/50 leading-relaxed mb-8 sm:mb-10 max-w-xl animate-fade-in-up animation-delay-200">
               Ohne auf Empfehlungen, Netzwerk oder Kaltakquise zu warten.{" "}
               <span className="text-primary/75 font-medium">
                 Wir bauen Ihnen ein digitales System,
@@ -78,7 +78,7 @@ export default function Hero() {
             </div>
 
             {/* Trust stats */}
-            <div className="flex flex-wrap items-center gap-8 mt-12 pt-8 border-t border-primary/8 animate-fade-in-up animation-delay-600">
+            <div className="flex flex-wrap items-center gap-5 sm:gap-8 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-primary/8 animate-fade-in-up animation-delay-600">
               {[
                 { value: "3+", label: "Jahre am Markt" },
                 { value: "100%", label: "Individuelle Strategie" },
@@ -114,7 +114,7 @@ export default function Hero() {
               </div>
 
               {/* Floating card – bottom left: Google Review */}
-              <div className="absolute -bottom-5 -left-5 sm:-left-8 bg-white rounded-xl shadow-lg shadow-primary/8 px-4 py-3.5 flex items-center gap-3 border border-primary/5">
+              <div className="absolute -bottom-4 -left-3 sm:-bottom-5 sm:-left-8 bg-white rounded-xl shadow-lg shadow-primary/8 px-3 py-2.5 sm:px-4 sm:py-3.5 flex items-center gap-2 sm:gap-3 border border-primary/5">
                 <div className="w-9 h-9 shrink-0 flex items-center justify-center">
                   <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
@@ -136,7 +136,7 @@ export default function Hero() {
               </div>
 
               {/* Floating card – top right */}
-              <div className="absolute -top-5 -right-5 sm:-right-8 bg-white rounded-xl shadow-lg shadow-primary/8 px-4 py-3.5 border border-primary/5 text-center z-20">
+              <div className="absolute -top-4 -right-3 sm:-top-5 sm:-right-8 bg-white rounded-xl shadow-lg shadow-primary/8 px-3 py-2.5 sm:px-4 sm:py-3.5 border border-primary/5 text-center z-20">
                 <p className="text-2xl font-bold text-accent leading-none">
                   +47
                 </p>

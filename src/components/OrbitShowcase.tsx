@@ -37,17 +37,17 @@ export default function OrbitShowcase() {
         </div>
 
         {/* Orbit container */}
-        <div className="relative w-full max-w-2xl mx-auto aspect-square">
+        <div className="relative w-full max-w-[320px] sm:max-w-lg md:max-w-2xl mx-auto aspect-square">
 
           {/* Center element */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="w-28 h-28 sm:w-36 sm:h-36 bg-white rounded-full shadow-xl shadow-primary/8 flex items-center justify-center border border-primary/5">
+            <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 bg-white rounded-full shadow-xl shadow-primary/8 flex items-center justify-center border border-primary/5">
               <Logo size="small" />
             </div>
           </div>
 
           {/* Orbit ring */}
-          <div className="absolute inset-6 sm:inset-10 rounded-full border border-dashed border-primary/8" />
+          <div className="absolute inset-4 sm:inset-6 md:inset-10 rounded-full border border-dashed border-primary/8" />
 
           {/* Orbiting items */}
           <div className="absolute inset-0 animate-orbit">
@@ -58,17 +58,17 @@ export default function OrbitShowcase() {
                   key={i}
                   className="absolute top-1/2 left-1/2"
                   style={{
-                    transform: `rotate(${angle}deg) translateX(min(42vw, 220px)) rotate(-${angle}deg)`,
+                    transform: `rotate(${angle}deg) translateX(min(36vw, 220px)) rotate(-${angle}deg)`,
                   }}
                 >
                   {/* Counter-rotate to keep content upright */}
                   <div className="animate-orbit-counter -translate-x-1/2 -translate-y-1/2">
                     <div className="group relative">
                       {/* Card */}
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-lg shadow-primary/6 border border-primary/5 flex flex-col items-center justify-center gap-1 transition-all group-hover:shadow-xl group-hover:scale-110 group-hover:border-accent/30 cursor-pointer">
+                      <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white rounded-xl sm:rounded-2xl shadow-lg shadow-primary/6 border border-primary/5 flex flex-col items-center justify-center gap-0.5 sm:gap-1 transition-all group-hover:shadow-xl group-hover:scale-110 group-hover:border-accent/30 cursor-pointer">
                         {/* Placeholder icon */}
-                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-accent/10 rounded-md sm:rounded-lg flex items-center justify-center">
+                          <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                             {i % 3 === 0 ? (
                               <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" />
                             ) : i % 3 === 1 ? (
@@ -78,13 +78,13 @@ export default function OrbitShowcase() {
                             )}
                           </svg>
                         </div>
-                        <span className="text-[9px] sm:text-[10px] font-semibold text-primary/60 text-center leading-tight whitespace-pre-line px-1">
+                        <span className="text-[7px] sm:text-[9px] md:text-[10px] font-semibold text-primary/60 text-center leading-tight whitespace-pre-line px-0.5">
                           {item.placeholder}
                         </span>
                       </div>
 
-                      {/* Tooltip */}
-                      <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                      {/* Tooltip – hidden on mobile */}
+                      <div className="hidden sm:block absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                         <span className="bg-primary text-white text-xs font-medium px-3 py-1 rounded-full whitespace-nowrap">
                           {item.label}
                         </span>

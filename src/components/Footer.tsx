@@ -67,9 +67,9 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
           <p>&copy; {new Date().getFullYear()} Gründer Marketing. Alle Rechte vorbehalten.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <a href="/impressum" className="hover:text-accent transition-colors">Impressum</a>
-            <a href="/datenschutz" className="hover:text-accent transition-colors">Datenschutzerklärung</a>
+            <a href="/datenschutz" className="hover:text-accent transition-colors">Datenschutz</a>
             <a href="/agb" className="hover:text-accent transition-colors">AGB</a>
           </div>
         </div>

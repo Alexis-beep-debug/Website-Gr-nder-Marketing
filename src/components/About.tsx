@@ -36,7 +36,7 @@ export default function About() {
     <section id="ueber-uns" className="py-24 sm:py-32 bg-section-alt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Founder Section */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center mb-16 sm:mb-24">
           <div className="relative">
             <div className="bg-gradient-to-br from-primary to-primary-light rounded-2xl aspect-[4/5] overflow-hidden">
               <img
@@ -60,7 +60,7 @@ export default function About() {
             <p className="text-accent font-semibold mb-6">
               Gründer & Geschäftsführer
             </p>
-            <blockquote className="text-muted leading-relaxed text-lg border-l-4 border-accent pl-6 mb-8 italic">
+            <blockquote className="text-muted leading-relaxed text-base sm:text-lg border-l-4 border-accent pl-4 sm:pl-6 mb-8 italic">
               &ldquo;Ich habe selbst als Makler und in der Hausverwaltung
               gearbeitet. Ich weiß also genau, was es bedeutet, täglich
               Eigentümer zu akquirieren und gleichzeitig das laufende Geschäft am
@@ -75,7 +75,7 @@ export default function About() {
         </div>
 
         {/* Mission */}
-        <div className="bg-accent/[0.06] border border-accent/15 rounded-3xl p-10 sm:p-14 text-center mb-20">
+        <div className="bg-accent/[0.06] border border-accent/15 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-14 text-center mb-14 sm:mb-20">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">
             Unsere Mission
           </span>
