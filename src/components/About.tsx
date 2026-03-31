@@ -75,14 +75,14 @@ export default function About() {
         </div>
 
         {/* Mission */}
-        <div className="bg-primary rounded-3xl p-10 sm:p-14 text-center mb-20">
+        <div className="bg-accent/[0.06] border border-accent/15 rounded-3xl p-10 sm:p-14 text-center mb-20">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">
             Unsere Mission
           </span>
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mt-3 mb-6">
+          <h3 className="text-2xl sm:text-3xl font-bold text-primary mt-3 mb-6">
             Immobilienmakler zukunftsstark.
           </h3>
-          <p className="text-white/70 leading-relaxed max-w-3xl mx-auto text-lg">
+          <p className="text-primary/60 leading-relaxed max-w-3xl mx-auto text-lg">
             Gründer Marketing wurde ins Leben gerufen, um Immobilienmakler als
             professioneller Partner an der Seite zu unterstützen, weil der
             Objektzulauf eingebrochen ist und die aktuellen Akquisemaßnahmen

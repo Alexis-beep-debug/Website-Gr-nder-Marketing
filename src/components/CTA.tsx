@@ -2,22 +2,22 @@ export default function CTA() {
   return (
     <section id="kontakt" className="py-24 sm:py-32 bg-section-alt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-primary via-primary-light to-primary rounded-3xl p-10 sm:p-16 text-center relative overflow-hidden">
+        <div className="bg-accent/[0.06] border border-accent/15 rounded-3xl p-10 sm:p-16 text-center relative overflow-hidden">
           {/* Decorative circles */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/8 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/8 rounded-full blur-3xl" />
 
           <div className="relative z-10">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">
               Jetzt starten
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mt-3 mb-6 leading-tight">
               Handeln Sie jetzt, bevor sich
               <br className="hidden sm:block" /> Eigentümer & Käufer{" "}
               <span className="text-accent">für andere Makler</span>{" "}
               entscheiden!
             </h2>
-            <p className="text-white/70 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-primary/55 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
               Wir liefern Ihnen qualifizierte Kontaktanfragen von Verkäufern und
               Käufern. Sichern Sie sich jetzt Ihr kostenloses Erstgespräch.
             </p>
@@ -44,7 +44,7 @@ export default function CTA() {
               </a>
               <a
                 href="mailto:info@marketing-gruender.de"
-                className="border-2 border-white/20 text-white hover:border-accent hover:text-accent px-10 py-4 rounded-xl text-lg font-semibold transition-all flex items-center gap-3"
+                className="border-2 border-accent/20 text-primary/70 hover:border-accent hover:text-accent px-10 py-4 rounded-xl text-lg font-semibold transition-all flex items-center gap-3"
               >
                 <svg
                   className="w-5 h-5"
@@ -63,7 +63,7 @@ export default function CTA() {
               </a>
             </div>
 
-            <p className="text-white/40 text-sm mt-8">
+            <p className="text-primary/30 text-sm mt-8">
               Kostenloses Erstgespräch &middot; Unverbindlich &middot; Individuelle Analyse
             </p>
           </div>

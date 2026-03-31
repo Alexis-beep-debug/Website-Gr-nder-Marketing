@@ -1,22 +1,4 @@
-const pillTags = [
-  "Meta Ads",
-  "Lead-Generierung",
-  "Alleinaufträge",
-  "Immobilienmakler",
-  "Facebook Kampagnen",
-  "Eigentümerakquise",
-  "Instagram Werbung",
-  "Landingpages",
-  "Regionale Sichtbarkeit",
-  "Digitales Marketing",
-  "Makler Funnels",
-  "Objektakquise",
-];
-
 export default function Hero() {
-  // Duplicate for seamless loop
-  const tags = [...pillTags, ...pillTags];
-
   return (
     <section
       id="hero"
@@ -25,25 +7,8 @@ export default function Hero() {
       {/* Subtle green tint */}
       <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-accent/5 rounded-full blur-[160px] pointer-events-none" />
 
-      {/* ── Scrolling pill marquee ──────────────────────── */}
-      <div className="relative w-full overflow-hidden pt-24 pb-0 select-none">
-        <div className="flex items-center gap-3 w-max animate-marquee-slow">
-          {tags.map((tag, i) => (
-            <span
-              key={i}
-              className="shrink-0 inline-flex items-center gap-2 border border-primary/10 text-primary/50 bg-white px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap"
-            >
-              {i % 3 === 1 && (
-                <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block" />
-              )}
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* ── Main content ───────────────────────────────── */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex items-center py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex items-center pt-32 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
 
           {/* LEFT: Text */}
