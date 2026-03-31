@@ -1,4 +1,11 @@
+"use client";
+
+import { useRegion } from "@/hooks/useRegion";
+
 export default function Hero() {
+  const region = useRegion();
+  const regionText = region ? `in ${region}` : "in Ihrer Region";
+
   return (
     <section
       id="hero"
@@ -17,7 +24,7 @@ export default function Hero() {
             {/* Label */}
             <div className="flex flex-col gap-1.5 mb-8 animate-fade-in">
               <span className="text-xs font-semibold tracking-widest uppercase text-primary/40">
-                Für Immobilienmakler
+                Für Immobilienmakler {regionText}
               </span>
               <div className="w-10 h-0.5 bg-accent" />
             </div>
@@ -48,8 +55,8 @@ export default function Hero() {
               <span className="text-primary/75 font-medium">
                 Wir bauen Ihnen ein digitales System,
               </span>{" "}
-              das Sie in Ihrer Region sichtbar macht und Ihnen kontinuierlich
-              neue Eigentümeranfragen liefert.
+              das Sie {region ? `in ${region}` : "in Ihrer Region"} sichtbar macht und
+              Ihnen kontinuierlich neue Eigentümeranfragen liefert.
             </p>
 
             {/* CTAs */}
