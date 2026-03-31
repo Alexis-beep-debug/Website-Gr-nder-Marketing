@@ -7,19 +7,43 @@
 | **Projekt** | Redesign der Website für Gründer Marketing |
 | **Kunde** | Malte-Valentin Gründer |
 | **Firma** | Gründer Marketing |
-| **Domain** | marketing-gruender.de |
+| **Domain** | marketing-gruender.de / www.marketing-gruender.de |
 | **Zielgruppe** | Immobilienmakler, Bauträger, Verwaltungen |
-| **Status** | In Entwicklung |
+| **Repository** | alexis-beep-debug/Website-Gr-nder-Marketing |
+| **Branch** | claude/redesign-marketing-website-c7KKI |
+| **Status** | Live auf Railway |
 
 ## Tech-Stack
 
 | Technologie | Version | Zweck |
 |------------|---------|-------|
-| **Next.js** | 16.x | React-Framework mit SSG |
+| **Next.js** | 16.x | React-Framework (Server-Mode für Railway) |
 | **React** | 19.x | UI-Bibliothek |
 | **TypeScript** | 6.x | Type-Safety |
 | **Tailwind CSS** | 4.x | Utility-first CSS |
 | **PostCSS** | 8.x | CSS-Processing |
+
+## Hosting & Deployment
+
+| Bereich | Details |
+|---------|---------|
+| **Hosting** | Railway |
+| **Railway-URL** | fkj0s59w.up.railway.app |
+| **Domain-Registrar** | IONOS |
+| **Deployment-Modus** | `next start` (Node-Server, kein Static Export) |
+| **SSL** | Automatisch über Railway (für www-Subdomain) |
+
+### DNS-Konfiguration (IONOS)
+
+| Typ | Hostname | Wert | Zweck |
+|-----|----------|------|-------|
+| CNAME | `www` | `fkj0s59w.up.railway.app` | Hauptdomain → Railway |
+| TXT | `_railway-verify.www` | `railway-verify=90c17f942d3e488550f4070ec...` | Railway-Verifizierung |
+
+### Domain-Weiterleitung (IONOS)
+
+- `marketing-gruender.de` → `https://www.marketing-gruender.de` (HTTP 301)
+- Alte A-Record (`217.160.0.159`) und AAAA-Record mussten entfernt werden
 
 ## Design-System
 
@@ -88,15 +112,22 @@
 - Beschreibende Meta-Description
 - Keywords für Immobilienmakler-Marketing
 - Responsive Design (Mobile-first)
-- Performante Ladezeiten durch Static Export
 
-## Deployment
+## Changelog
 
-- **Output:** Static Export (`next build` → `/out`)
-- **Konfiguration:** `next.config.ts` mit `output: "export"`
+| Datum | Änderung |
+|-------|----------|
+| 31.03.2026 | Initiales Projekt-Setup: Next.js 16, React 19, TypeScript, Tailwind CSS 4 |
+| 31.03.2026 | Alle Sektionen erstellt (Hero, Challenges, Solution, TargetGroup, Services, Advantages, About, FAQ, CTA, Footer) |
+| 31.03.2026 | Fix: `output: "export"` aus `next.config.ts` entfernt – Railway benötigt Node-Server (`next start`) statt Static Export |
+| 31.03.2026 | DNS-Konfiguration bei IONOS: CNAME für www → Railway, TXT für Railway-Verifizierung |
+| 31.03.2026 | Domain-Weiterleitung bei IONOS: marketing-gruender.de → https://www.marketing-gruender.de (301) |
+| 31.03.2026 | SSL-Hinweis: Weiterleitung muss auf https:// zeigen, Railway stellt SSL-Zertifikat automatisch aus |
 
 ## Offene Punkte / TODOs
 
+- [ ] SSL: Weiterleitung bei IONOS auf `https://www.marketing-gruender.de` prüfen
+- [ ] Alte A-Record und AAAA-Record bei IONOS löschen (falls noch nicht geschehen)
 - [ ] Echtes Foto von Malte-Valentin Gründer einbinden
 - [ ] Firmenlogo einbinden (aktuell Text-Logo)
 - [ ] Impressum-Seite erstellen
@@ -108,4 +139,4 @@
 
 ---
 
-*Letzte Aktualisierung: 28.03.2026*
+*Letzte Aktualisierung: 31.03.2026*
