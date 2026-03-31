@@ -136,7 +136,7 @@ export default function Hero() {
               </div>
 
               {/* Floating card – top right */}
-              <div className="absolute -top-5 -right-5 sm:-right-8 bg-white rounded-xl shadow-lg shadow-primary/8 px-4 py-3.5 border border-primary/5 text-center">
+              <div className="absolute -top-5 -right-5 sm:-right-8 bg-white rounded-xl shadow-lg shadow-primary/8 px-4 py-3.5 border border-primary/5 text-center z-20">
                 <p className="text-2xl font-bold text-accent leading-none">
                   +47
                 </p>
