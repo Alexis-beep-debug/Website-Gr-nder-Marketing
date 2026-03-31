@@ -56,11 +56,11 @@ const services = [
   },
 ];
 
-function DeviceMockup({ type, accent }: { type: string; label: string; accent: string }) {
-  return (
-    <div className="w-full flex items-end justify-center mb-6 h-44">
-      {type === "phone" && (
-        <div className="relative w-28 h-44 bg-primary/90 rounded-xl shadow-lg overflow-hidden border-2 border-primary/20">
+function DeviceMockup({ type, label, accent }: { type: string; label: string; accent: string }) {
+  if (type === "phone") {
+    return (
+      <div className="w-full flex justify-center mb-6">
+        <div className="relative w-28 h-48 bg-primary/90 rounded-xl shadow-lg overflow-hidden border-2 border-primary/20">
           <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-10 h-1 bg-white/20 rounded-full" />
           <div className={`absolute inset-2 top-4 rounded-md bg-gradient-to-br ${accent} flex flex-col items-center justify-center p-2`}>
             <div className="w-full h-8 bg-white/20 rounded-sm mb-2" />
@@ -70,52 +70,58 @@ function DeviceMockup({ type, accent }: { type: string; label: string; accent: s
             <div className="mt-2 w-16 h-4 bg-white/30 rounded-sm" />
           </div>
         </div>
-      )}
+      </div>
+    );
+  }
 
-      {type === "dashboard" && (
-        <div className="relative w-full max-w-[220px] h-36 bg-primary/90 rounded-lg shadow-lg overflow-hidden border-2 border-primary/20">
+  if (type === "dashboard") {
+    return (
+      <div className="w-full flex justify-center mb-6">
+        <div className="relative w-full max-w-[200px] h-32 bg-primary/90 rounded-lg shadow-lg overflow-hidden border-2 border-primary/20">
           <div className={`absolute inset-1.5 rounded-md bg-gradient-to-br ${accent} p-2`}>
             <div className="flex gap-1 mb-2">
               <div className="w-1/3 h-3 bg-white/25 rounded-sm" />
               <div className="w-1/3 h-3 bg-white/15 rounded-sm" />
               <div className="w-1/3 h-3 bg-white/20 rounded-sm" />
             </div>
-            <div className="flex gap-1 h-16">
+            <div className="flex gap-1 h-14">
               <div className="w-1/2 bg-white/15 rounded-sm flex items-end p-1 gap-0.5">
                 <div className="w-1/4 h-4 bg-white/30 rounded-sm" />
-                <div className="w-1/4 h-8 bg-white/40 rounded-sm" />
+                <div className="w-1/4 h-7 bg-white/40 rounded-sm" />
                 <div className="w-1/4 h-5 bg-white/30 rounded-sm" />
-                <div className="w-1/4 h-10 bg-white/50 rounded-sm" />
+                <div className="w-1/4 h-9 bg-white/50 rounded-sm" />
               </div>
               <div className="w-1/2 bg-white/10 rounded-sm p-1 space-y-1">
                 <div className="w-full h-2 bg-white/20 rounded-full" />
                 <div className="w-3/4 h-2 bg-white/15 rounded-full" />
                 <div className="w-full h-2 bg-white/20 rounded-full" />
-                <div className="w-1/2 h-2 bg-white/15 rounded-full" />
               </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
+    );
+  }
 
-      {type === "laptop" && (
-        <div className="relative">
-          <div className="w-[210px] h-32 bg-primary/90 rounded-t-lg shadow-lg overflow-hidden border-2 border-b-0 border-primary/20">
-            <div className={`absolute inset-1.5 bottom-0 rounded-t-md bg-gradient-to-br ${accent} p-2`}>
-              <div className="w-full h-4 bg-white/20 rounded-sm mb-1.5" />
-              <div className="flex gap-1">
-                <div className="w-1/3 h-14 bg-white/15 rounded-sm" />
-                <div className="w-2/3 space-y-1">
-                  <div className="h-2 bg-white/20 rounded-full" />
-                  <div className="h-2 w-3/4 bg-white/15 rounded-full" />
-                  <div className="h-6 bg-white/10 rounded-sm mt-1" />
-                </div>
+  // laptop
+  return (
+    <div className="w-full flex justify-center mb-6">
+      <div className="relative">
+        <div className="w-full max-w-[200px] h-28 bg-primary/90 rounded-t-lg shadow-lg overflow-hidden border-2 border-b-0 border-primary/20">
+          <div className={`absolute inset-1.5 bottom-0 rounded-t-md bg-gradient-to-br ${accent} p-2`}>
+            <div className="w-full h-4 bg-white/20 rounded-sm mb-1.5" />
+            <div className="flex gap-1">
+              <div className="w-1/3 h-12 bg-white/15 rounded-sm" />
+              <div className="w-2/3 space-y-1">
+                <div className="h-2 bg-white/20 rounded-full" />
+                <div className="h-2 w-3/4 bg-white/15 rounded-full" />
+                <div className="h-5 bg-white/10 rounded-sm mt-1" />
               </div>
             </div>
           </div>
-          <div className="w-[230px] h-2 bg-primary/20 rounded-b-lg mx-auto" />
         </div>
-      )}
+        <div className="w-[220px] max-w-full h-2 bg-primary/20 rounded-b-lg mx-auto" />
+      </div>
     </div>
   );
 }
