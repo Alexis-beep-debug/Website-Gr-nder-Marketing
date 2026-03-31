@@ -1,3 +1,5 @@
+import Logo from "@/components/Logo";
+
 const orbitItems = [
   { label: "Website-Projekt", placeholder: "Makler\nWebsite" },
   { label: "Facebook Kampagne", placeholder: "Facebook\nAds" },
@@ -20,7 +22,7 @@ export default function OrbitShowcase() {
             </span>
             <div className="w-10 h-0.5 bg-accent" />
           </div>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-primary leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold text-primary leading-tight">
             Projekte die{" "}
             <em
               style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontWeight: 600 }}
@@ -39,13 +41,8 @@ export default function OrbitShowcase() {
 
           {/* Center element */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="w-28 h-28 sm:w-36 sm:h-36 bg-white rounded-full shadow-xl shadow-primary/8 flex flex-col items-center justify-center border border-primary/5">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white font-bold text-lg mb-1">
-                G
-              </div>
-              <span className="text-[10px] font-semibold text-primary/40 uppercase tracking-widest">
-                Marketing
-              </span>
+            <div className="w-28 h-28 sm:w-36 sm:h-36 bg-white rounded-full shadow-xl shadow-primary/8 flex items-center justify-center border border-primary/5">
+              <Logo size="small" />
             </div>
           </div>
 
@@ -102,7 +99,7 @@ export default function OrbitShowcase() {
 
         {/* Bottom text */}
         <p className="text-center text-primary/30 text-sm mt-12">
-          * Platzhalter – echte Projektbilder werden nachgeliefert
+          Unsere Projekte – individuell für jeden Kunden umgesetzt.
         </p>
       </div>
     </section>

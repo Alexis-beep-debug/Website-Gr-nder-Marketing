@@ -23,7 +23,7 @@ const challenges = [
 
 export default function Challenges() {
   return (
-    <section className="py-24 bg-section-alt">
+    <section className="py-24 sm:py-32 bg-section-alt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">

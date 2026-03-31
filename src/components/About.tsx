@@ -33,7 +33,7 @@ const qualities = [
 
 export default function About() {
   return (
-    <section id="ueber-uns" className="py-24 bg-section-alt">
+    <section id="ueber-uns" className="py-24 sm:py-32 bg-section-alt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Founder Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">

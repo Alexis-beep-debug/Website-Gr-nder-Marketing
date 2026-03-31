@@ -9,21 +9,40 @@ import OrbitShowcase from "@/components/OrbitShowcase";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <MarqueeBanner />
-      <Challenges />
-      <Solution />
-      <TargetGroup />
-      <Services />
-      <Advantages />
-      <OrbitShowcase />
-      <About />
-      <FAQ />
-      <CTA />
+      <ScrollReveal>
+        <Challenges />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Solution />
+      </ScrollReveal>
+      <ScrollReveal>
+        <TargetGroup />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Services />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Advantages />
+      </ScrollReveal>
+      <ScrollReveal>
+        <OrbitShowcase />
+      </ScrollReveal>
+      <ScrollReveal>
+        <About />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FAQ />
+      </ScrollReveal>
+      <ScrollReveal>
+        <CTA />
+      </ScrollReveal>
     </>
   );
 }
