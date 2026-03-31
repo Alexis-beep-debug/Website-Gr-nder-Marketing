@@ -3,23 +3,30 @@
 const reviews = [
   {
     quote:
-      "Seit wir mit Gründer Marketing arbeiten, bekommen wir jede Woche qualifizierte Eigentümeranfragen. Das hat unser Geschäft komplett verändert.",
-    name: "Thomas M.",
-    time: "vor 2 Monaten",
-    stars: 5,
-  },
-  {
-    quote:
-      "Endlich ein Partner, der versteht wie die Immobilienbranche funktioniert. Die Kampagnen sind punktgenau und die Ergebnisse sprechen für sich.",
-    name: "Sandra K.",
+      "Klare Empfehlung für Gründer Marketing. Sehr kreativ und innovativ, die Kampagnen werden regelmäßig an den Markt angepasst. Man merkt, dass mitgedacht wird und der Fokus auf Ergebnissen liegt. Eine Zusammenarbeit, die sich für Unternehmer definitiv lohnt.",
+    name: "Michael Berndorf",
     time: "vor 3 Monaten",
     stars: 5,
   },
   {
     quote:
-      "Innerhalb von 3 Monaten hatten wir mehr Alleinaufträge als im gesamten Vorjahr. Die Investition hat sich mehrfach ausgezahlt.",
-    name: "Markus W.",
-    time: "vor 1 Monat",
+      "Ich war ehrlich gesagt anfangs ziemlich skeptisch, ob sich bezahlte Werbeanzeigen für mein Maklerbüro wirklich lohnen. Nach drei Monaten Zusammenarbeit kann ich jedoch ganz klar sagen: Die Investition hat sich mehr als ausgezahlt.",
+    name: "Bellevue Immobilien",
+    time: "vor einem Monat",
+    stars: 5,
+  },
+  {
+    quote:
+      "Vielen Dank für die tolle Betreuung und die unkomplizierte Zusammenarbeit. Man fühlt sich jederzeit gut aufgehoben. Klare Weiterempfehlung!",
+    name: "Frank Schmidtke",
+    time: "vor 2 Monaten",
+    stars: 5,
+  },
+  {
+    quote:
+      "Unsere neue Website nenne ich mittlerweile tatsächlich einen \u201eKundenmagneten\u201c. Ein großes Dankeschön geht an Malte für die hervorragende Umsetzung. Er war in der Zusammenarbeit stets kompetent, zuverlässig und absolut professionell.",
+    name: "Timon Hentschel",
+    time: "vor einer Woche",
     stars: 5,
   },
 ];
@@ -82,7 +89,7 @@ export default function Testimonials() {
         </div>
 
         {/* Review cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {reviews.map((r, i) => (
             <div
               key={i}
