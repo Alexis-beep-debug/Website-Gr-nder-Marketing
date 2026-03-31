@@ -37,17 +37,13 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Founder Section */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-          {/* Image placeholder */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-primary to-primary-light rounded-2xl aspect-[4/5] flex items-end justify-center overflow-hidden">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-16 h-16 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <p className="text-white/60 text-sm">Foto: Malte-Valentin Gründer</p>
-              </div>
+            <div className="bg-gradient-to-br from-primary to-primary-light rounded-2xl aspect-[4/5] overflow-hidden">
+              <img
+                src="/images/team/malte-gruender.jpeg"
+                alt="Malte-Valentin Gründer – Gründer & Geschäftsführer von Gründer Marketing"
+                className="w-full h-full object-cover object-center"
+              />
             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-2xl -z-10" />
