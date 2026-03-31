@@ -6,21 +6,22 @@ export default function Logo({
   size?: "small" | "default" | "large";
 }) {
   const sizes = {
-    small: { img: "h-7", gap: "gap-2" },
-    default: { img: "h-9", gap: "gap-2.5" },
-    large: { img: "h-11", gap: "gap-3" },
+    small: "h-8",
+    default: "h-10",
+    large: "h-14",
   };
-  const s = sizes[size];
+
+  // 1.png = green logo for light backgrounds
+  // 3.png = white logo for dark backgrounds
+  const src = variant === "light"
+    ? "/images/team/3.png"
+    : "/images/team/1.png";
 
   return (
-    <div className={`flex items-center ${s.gap}`}>
-      <img
-        src="/images/logos/logo.png"
-        alt="Gründer Marketing"
-        className={`${s.img} w-auto object-contain shrink-0 ${
-          variant === "light" ? "brightness-0 invert" : ""
-        }`}
-      />
-    </div>
+    <img
+      src={src}
+      alt="Gründer Marketing"
+      className={`${sizes[size]} w-auto object-contain`}
+    />
   );
 }
