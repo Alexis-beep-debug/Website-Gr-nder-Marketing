@@ -83,6 +83,29 @@ body {
   will-change: transform;
 }
 
+/* Orbit rotation */
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes orbit-counter {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+.animate-orbit {
+  animation: orbit 45s linear infinite;
+}
+.animate-orbit-counter {
+  animation: orbit-counter 45s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-orbit, .animate-orbit-counter,
+  .animate-marquee, .animate-marquee-slow, .animate-marquee-reverse {
+    animation: none;
+  }
+}
+
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20% { transform: translateX(-8px); }

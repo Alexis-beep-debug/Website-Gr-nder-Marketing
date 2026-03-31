@@ -5,6 +5,7 @@ import Solution from "@/components/Solution";
 import TargetGroup from "@/components/TargetGroup";
 import Services from "@/components/Services";
 import Advantages from "@/components/Advantages";
+import OrbitShowcase from "@/components/OrbitShowcase";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -19,6 +20,7 @@ export default function Home() {
       <TargetGroup />
       <Services />
       <Advantages />
+      <OrbitShowcase />
       <About />
       <FAQ />
       <CTA />
