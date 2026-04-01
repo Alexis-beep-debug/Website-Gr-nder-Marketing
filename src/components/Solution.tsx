@@ -4,34 +4,24 @@ const steps = [
     title: "Regionale Marktpräsenz",
     description:
       "Etablierung Ihrer Immobilienkompetenz in der Marktregion. Wir gewährleisten eine durchgängige Sichtbarkeit bei den relevanten Eigentümern und Interessenten auf digitalen Kanälen.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+    image: "/images/team/malte-gruender.jpeg",
+    imageAlt: "Regionale Marktpräsenz aufbauen",
   },
   {
     number: "02",
     title: "Qualifizierte Kontaktanfragen",
     description:
       "Entwicklung spezifischer Angebote zur Generierung qualifizierter Kontaktanfragen von den richtigen Kundenavataren. Die Konvertierung erfolgt auf speziell optimierten Landeseiten.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
+    image: "/images/team/malte-gruender.jpeg",
+    imageAlt: "Qualifizierte Leads generieren",
   },
   {
     number: "03",
     title: "Zulauf und Wachstum",
     description:
       "Die gewonnenen qualifizierten Kontaktanfragen überführen Sie in Geschäftsabschlüsse. Dies sichert langfristigen Zulauf, messbares Wachstum und ein starkes Netzwerk an interessanten Kontakten.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
+    image: "/images/team/malte-gruender.jpeg",
+    imageAlt: "Wachstum und Erfolg",
   },
 ];
 
@@ -40,7 +30,7 @@ export default function Solution() {
     <section id="loesung" className="py-24 sm:py-32 bg-[#f0f5f3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-20">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">
             Unsere Lösung
           </span>
@@ -54,32 +44,57 @@ export default function Solution() {
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {steps.map((step, i) => (
-            <div key={i} className="relative group">
-              <div className="bg-light rounded-xl p-8 h-full border border-black/5 hover:border-accent/30 transition-all duration-300 hover:shadow-lg">
-                {/* Number */}
-                <span className="text-5xl font-extrabold text-accent/15 absolute top-6 right-6">
-                  {step.number}
-                </span>
-                {/* Icon */}
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent mb-5 group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                  {step.icon}
+        {/* Vertical Timeline */}
+        <div className="relative">
+          {/* Center line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-accent/20 -translate-x-1/2 hidden lg:block" />
+
+          <div className="space-y-16 lg:space-y-24">
+            {steps.map((step, i) => {
+              const isEven = i % 2 === 0;
+              return (
+                <div key={i} className="relative">
+                  {/* Timeline dot */}
+                  <div className="absolute left-1/2 top-8 -translate-x-1/2 z-10 hidden lg:flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm border-4 border-[#f0f5f3]">
+                      {step.number}
+                    </div>
+                  </div>
+
+                  <div className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center`}>
+                    {/* Image */}
+                    <div className={`${isEven ? "lg:order-1" : "lg:order-2"}`}>
+                      <div className="relative overflow-hidden rounded-md shadow-xl">
+                        <img
+                          src={step.image}
+                          alt={step.imageAlt}
+                          className="w-full aspect-[4/3] object-cover"
+                        />
+                        {/* Subtle accent overlay */}
+                        <div className="absolute inset-0 bg-accent/5" />
+                      </div>
+                    </div>
+
+                    {/* Text */}
+                    <div className={`${isEven ? "lg:order-2 lg:pl-12" : "lg:order-1 lg:pr-12 lg:text-right"}`}>
+                      {/* Mobile number badge */}
+                      <div className={`lg:hidden mb-4 ${!isEven ? "flex justify-end" : ""}`}>
+                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white font-bold text-sm">
+                          {step.number}
+                        </span>
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
+                        {step.title}
+                      </h3>
+                      <p className="text-muted leading-relaxed text-base sm:text-lg">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-muted leading-relaxed text-sm">
-                  {step.description}
-                </p>
-              </div>
-              {/* Connector */}
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-accent/20" />
-              )}
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

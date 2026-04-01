@@ -76,12 +76,12 @@ export default function Advantages() {
           {advantages.map((adv) => (
             <div
               key={adv.number}
-              className="relative bg-white rounded-xl p-7 border border-black/5 hover:border-accent/30 transition-all duration-300 group shadow-sm"
+              className="relative bg-white rounded-md p-7 border border-black/5 hover:border-accent/30 transition-all duration-300 group shadow-sm"
             >
               <div className="absolute top-5 right-5 text-3xl font-bold text-accent/8">
                 {adv.number}
               </div>
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent mb-5 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 bg-accent/10 rounded-md flex items-center justify-center text-accent mb-5 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                 {adv.icon}
               </div>
               <h3 className="font-semibold text-primary text-sm leading-snug mb-2">

@@ -104,7 +104,7 @@ export default function TargetGroup() {
             return (
               <div
                 key={target.id}
-                className={`border rounded-xl transition-all duration-300 ${
+                className={`border rounded-md transition-all duration-300 ${
                   isOpen
                     ? "border-accent/30 bg-accent/[0.02] shadow-lg shadow-accent/5"
                     : "border-primary/8 bg-white hover:border-primary/15"
@@ -116,7 +116,7 @@ export default function TargetGroup() {
                   className="w-full flex items-center gap-4 px-6 py-5 sm:px-8 sm:py-6 text-left"
                 >
                   <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
+                    className={`w-12 h-12 rounded-md flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isOpen
                         ? "bg-accent text-white"
                         : "bg-accent/10 text-accent"

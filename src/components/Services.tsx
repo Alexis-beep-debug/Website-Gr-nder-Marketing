@@ -8,11 +8,10 @@ const services = [
       "Regionale Sichtbarkeit rund um die Uhr",
       "Konstanter Zulauf an exklusive Anfragen",
     ],
-    mockup: "phone",
-    mockupLabel: "Facebook Ad",
-    accent: "from-accent to-accent-light",
+    accent: "bg-accent",
+    accentLight: "bg-accent/10 text-accent",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
       </svg>
     ),
@@ -26,11 +25,10 @@ const services = [
       "Kürzere Vermarktungszeiten, weniger Preisabschläge",
       "Schnelle Umsätze dank effektiver Vermarktung",
     ],
-    mockup: "dashboard",
-    mockupLabel: "Kampagnen-Dashboard",
-    accent: "from-sky-600 to-sky-400",
+    accent: "bg-sky-600",
+    accentLight: "bg-sky-100 text-sky-600",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
       </svg>
@@ -45,90 +43,19 @@ const services = [
       "Modern, professionell und kompatibel mit Ihrer Software",
       "SEO-optimiert für die ersten Plätze bei Google",
     ],
-    mockup: "laptop",
-    mockupLabel: "Makler Website",
-    accent: "from-amber-600 to-amber-400",
+    accent: "bg-amber-500",
+    accentLight: "bg-amber-100 text-amber-600",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
   },
 ];
 
-function DeviceMockup({ type, label, accent }: { type: string; label: string; accent: string }) {
-  if (type === "phone") {
-    return (
-      <div className="w-full flex justify-center mb-6">
-        <div className="relative w-28 h-48 bg-primary/90 rounded-xl shadow-lg overflow-hidden border-2 border-primary/20">
-          <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-10 h-1 bg-white/20 rounded-full" />
-          <div className={`absolute inset-2 top-4 rounded-md bg-gradient-to-br ${accent} flex flex-col items-center justify-center p-2`}>
-            <div className="w-full h-8 bg-white/20 rounded-sm mb-2" />
-            <div className="w-3/4 h-2 bg-white/30 rounded-full mb-1" />
-            <div className="w-1/2 h-2 bg-white/20 rounded-full mb-3" />
-            <div className="w-full h-14 bg-white/15 rounded-sm" />
-            <div className="mt-2 w-16 h-4 bg-white/30 rounded-sm" />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (type === "dashboard") {
-    return (
-      <div className="w-full flex justify-center mb-6">
-        <div className="relative w-full max-w-[200px] h-32 bg-primary/90 rounded-lg shadow-lg overflow-hidden border-2 border-primary/20">
-          <div className={`absolute inset-1.5 rounded-md bg-gradient-to-br ${accent} p-2`}>
-            <div className="flex gap-1 mb-2">
-              <div className="w-1/3 h-3 bg-white/25 rounded-sm" />
-              <div className="w-1/3 h-3 bg-white/15 rounded-sm" />
-              <div className="w-1/3 h-3 bg-white/20 rounded-sm" />
-            </div>
-            <div className="flex gap-1 h-14">
-              <div className="w-1/2 bg-white/15 rounded-sm flex items-end p-1 gap-0.5">
-                <div className="w-1/4 h-4 bg-white/30 rounded-sm" />
-                <div className="w-1/4 h-7 bg-white/40 rounded-sm" />
-                <div className="w-1/4 h-5 bg-white/30 rounded-sm" />
-                <div className="w-1/4 h-9 bg-white/50 rounded-sm" />
-              </div>
-              <div className="w-1/2 bg-white/10 rounded-sm p-1 space-y-1">
-                <div className="w-full h-2 bg-white/20 rounded-full" />
-                <div className="w-3/4 h-2 bg-white/15 rounded-full" />
-                <div className="w-full h-2 bg-white/20 rounded-full" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // laptop
-  return (
-    <div className="w-full flex justify-center mb-6">
-      <div className="relative">
-        <div className="w-full max-w-[200px] h-28 bg-primary/90 rounded-t-lg shadow-lg overflow-hidden border-2 border-b-0 border-primary/20">
-          <div className={`absolute inset-1.5 bottom-0 rounded-t-md bg-gradient-to-br ${accent} p-2`}>
-            <div className="w-full h-4 bg-white/20 rounded-sm mb-1.5" />
-            <div className="flex gap-1">
-              <div className="w-1/3 h-12 bg-white/15 rounded-sm" />
-              <div className="w-2/3 space-y-1">
-                <div className="h-2 bg-white/20 rounded-full" />
-                <div className="h-2 w-3/4 bg-white/15 rounded-full" />
-                <div className="h-5 bg-white/10 rounded-sm mt-1" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[220px] max-w-full h-2 bg-primary/20 rounded-b-lg mx-auto" />
-      </div>
-    </div>
-  );
-}
-
 export default function Services() {
   return (
-    <section id="leistungen" className="py-24 sm:py-32 bg-gradient-to-b from-section-alt to-white">
+    <section id="leistungen" className="py-24 sm:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -157,22 +84,20 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl overflow-hidden shadow-lg shadow-black/5 border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+              className="bg-white rounded-md overflow-hidden shadow-lg shadow-black/5 border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
             >
-              {/* Device Mockup */}
-              <div className="pt-6 px-6">
-                <DeviceMockup type={service.mockup} label={service.mockupLabel} accent={service.accent} />
-              </div>
+              {/* Colored top bar */}
+              <div className={`h-1.5 ${service.accent}`} />
 
-              <div className="px-6 sm:px-8 pb-6 sm:pb-8">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 shrink-0">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-lg font-bold text-primary leading-snug">
-                    {service.title}
-                  </h3>
+              <div className="p-6 sm:p-8">
+                {/* Icon */}
+                <div className={`w-14 h-14 ${service.accentLight} rounded-md flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
+                  {service.icon}
                 </div>
+
+                <h3 className="text-lg font-bold text-primary leading-snug mb-3">
+                  {service.title}
+                </h3>
                 <p className="text-muted text-sm leading-relaxed mb-5">
                   {service.description}
                 </p>

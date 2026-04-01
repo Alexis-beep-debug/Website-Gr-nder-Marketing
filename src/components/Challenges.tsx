@@ -1,8 +1,9 @@
 const challenges = [
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" fill="#FEE2E2" />
+        <path d="M15 9L9 15M9 9l6 6" stroke="#EF4444" strokeWidth={2.5} strokeLinecap="round" />
       </svg>
     ),
     title: "Zu wenig Verkaufsobjekte",
@@ -11,8 +12,9 @@ const challenges = [
   },
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" fill="#FEE2E2" />
+        <path d="M15 9L9 15M9 9l6 6" stroke="#EF4444" strokeWidth={2.5} strokeLinecap="round" />
       </svg>
     ),
     title: "Fehlende Kaufinteressenten",
@@ -44,9 +46,9 @@ export default function Challenges() {
           {challenges.map((challenge, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl p-8 shadow-lg shadow-black/5 border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="bg-white rounded-md p-8 shadow-lg shadow-black/5 border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center text-accent mb-5">
+              <div className="w-14 h-14 flex items-center justify-center mb-5">
                 {challenge.icon}
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">

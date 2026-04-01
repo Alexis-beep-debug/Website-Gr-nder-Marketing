@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const reviews = [
   {
     quote:
@@ -7,6 +9,7 @@ const reviews = [
     name: "Michael Berndorf",
     time: "vor 3 Monaten",
     stars: 5,
+    initials: "MB",
   },
   {
     quote:
@@ -14,6 +17,7 @@ const reviews = [
     name: "Bellevue Immobilien",
     time: "vor einem Monat",
     stars: 5,
+    initials: "BI",
   },
   {
     quote:
@@ -21,6 +25,7 @@ const reviews = [
     name: "Frank Schmidtke",
     time: "vor 2 Monaten",
     stars: 5,
+    initials: "FS",
   },
   {
     quote:
@@ -28,6 +33,7 @@ const reviews = [
     name: "Timon Hentschel",
     time: "vor einer Woche",
     stars: 5,
+    initials: "TH",
   },
 ];
 
@@ -55,8 +61,16 @@ function Stars({ count }: { count: number }) {
 }
 
 export default function Testimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goTo = (index: number) => {
+    if (index < 0) setCurrentIndex(reviews.length - 1);
+    else if (index >= reviews.length) setCurrentIndex(0);
+    else setCurrentIndex(index);
+  };
+
   return (
-    <section className="py-24 sm:py-32 bg-[#faf8f5]">
+    <section id="bewertungen" className="py-24 sm:py-32 bg-[#faf8f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section header */}
@@ -88,36 +102,66 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Review cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {reviews.map((r, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl border border-primary/5 p-6 sm:p-7 shadow-sm hover:shadow-md transition-shadow"
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-bold text-sm">
-                    {r.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-primary">{r.name}</p>
-                    <p className="text-xs text-primary/35">{r.time}</p>
-                  </div>
-                </div>
-                <GoogleIcon />
-              </div>
+        {/* Carousel */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Navigation arrows */}
+          <button
+            onClick={() => goTo(currentIndex - 1)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-14 z-10 w-11 h-11 rounded-full bg-white border border-primary/10 shadow-md flex items-center justify-center text-primary/50 hover:text-accent hover:border-accent/30 transition-all"
+            aria-label="Vorherige Bewertung"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button
+            onClick={() => goTo(currentIndex + 1)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-14 z-10 w-11 h-11 rounded-full bg-white border border-primary/10 shadow-md flex items-center justify-center text-primary/50 hover:text-accent hover:border-accent/30 transition-all"
+            aria-label="Nächste Bewertung"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
 
-              {/* Stars */}
-              <Stars count={r.stars} />
-
-              {/* Quote */}
-              <p className="text-sm text-primary/65 leading-relaxed mt-3">
-                {r.quote}
-              </p>
+          {/* Review card */}
+          <div className="bg-white rounded-md border border-primary/5 p-8 sm:p-12 shadow-sm text-center">
+            {/* Stars */}
+            <div className="flex justify-center mb-6">
+              <Stars count={reviews[currentIndex].stars} />
             </div>
-          ))}
+
+            {/* Quote */}
+            <blockquote className="text-lg sm:text-xl text-primary/70 leading-relaxed mb-8 max-w-2xl mx-auto">
+              &ldquo;{reviews[currentIndex].quote}&rdquo;
+            </blockquote>
+
+            {/* Author */}
+            <div className="flex items-center justify-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-sm">
+                {reviews[currentIndex].initials}
+              </div>
+              <div className="text-left">
+                <p className="font-semibold text-primary">{reviews[currentIndex].name}</p>
+                <p className="text-sm text-primary/40">{reviews[currentIndex].time}</p>
+              </div>
+              <GoogleIcon />
+            </div>
+          </div>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentIndex(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-all ${
+                  i === currentIndex ? "bg-accent w-8" : "bg-primary/15 hover:bg-primary/30"
+                }`}
+                aria-label={`Bewertung ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Link to Google */}
