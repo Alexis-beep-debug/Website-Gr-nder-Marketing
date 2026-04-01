@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Background image - covers full section */}
       <div className="absolute inset-0">
         <img
-          src="/images/team/malte-gruender.jpeg"
+          src="/images/team/hero-bg.jpeg"
           alt="Gründer Marketing Team"
           className="w-full h-full object-cover object-center"
         />
