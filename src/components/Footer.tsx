@@ -8,7 +8,9 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <Logo variant="dark" />
+              <a href="/">
+                <Logo variant="dark" />
+              </a>
             </div>
             <p className="text-primary/50 text-sm leading-relaxed">
               Wir geben Immobilienmaklern Stabilität im Geschäft.
@@ -20,11 +22,11 @@ export default function Footer() {
             <h4 className="font-semibold mb-4 text-primary">Menü</h4>
             <ul className="space-y-2.5">
               {[
-                ["Startseite", "#hero"],
-                ["Lösung", "#loesung"],
-                ["Leistungen", "#leistungen"],
-                ["Über uns", "#ueber-uns"],
-                ["FAQ", "#faq"],
+                ["Startseite", "/#hero"],
+                ["Lösung", "/#loesung"],
+                ["Leistungen", "/#leistungen"],
+                ["Über uns", "/#ueber-uns"],
+                ["FAQ", "/#faq"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <a href={href} className="text-primary/50 hover:text-accent transition-colors text-sm">

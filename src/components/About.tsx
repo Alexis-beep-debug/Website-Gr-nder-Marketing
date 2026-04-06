@@ -51,7 +51,7 @@ export default function About() {
 
           {/* Text */}
           <div>
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+            <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
               Der Gründer
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-3 mb-2">
@@ -76,7 +76,7 @@ export default function About() {
 
         {/* Mission */}
         <div className="bg-accent/[0.06] border border-accent/15 rounded-md sm:rounded-md p-6 sm:p-10 md:p-14 text-center mb-14 sm:mb-20">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+          <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
             Unsere Mission
           </span>
           <h3 className="text-2xl sm:text-3xl font-bold text-primary mt-3 mb-6">
@@ -94,7 +94,7 @@ export default function About() {
 
         {/* Qualities */}
         <div className="text-center mb-12">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+          <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
             Unsere Stärken
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-3">

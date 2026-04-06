@@ -57,11 +57,10 @@ export default function OrbitShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <div className="inline-flex flex-col items-center gap-1.5 mb-6">
-            <span className="text-xs font-semibold tracking-widest uppercase text-primary/40">
+          <div className="flex justify-center mb-6">
+            <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
               Unsere Methode
             </span>
-            <div className="w-10 h-0.5 bg-accent" />
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-primary leading-tight">
             So{" "}
@@ -78,8 +77,8 @@ export default function OrbitShowcase() {
           </p>
         </div>
 
-        {/* Orbit visualization - desktop only */}
-        <div className="relative mx-auto w-full max-w-[600px] aspect-square hidden lg:block">
+        {/* Orbit visualization - responsive */}
+        <div className="relative mx-auto w-full max-w-[320px] sm:max-w-[450px] lg:max-w-[600px] aspect-square">
           {/* Orbit rings */}
           <div className="absolute inset-[10%] rounded-full border border-dashed border-accent/15" />
           <div className="absolute inset-[25%] rounded-full border border-dashed border-accent/10" />
@@ -102,11 +101,16 @@ export default function OrbitShowcase() {
                     top: `${y}%`,
                   }}
                 >
-                  <div className="bg-white shadow-lg shadow-black/5 border border-black/5 rounded-xl px-4 py-3 flex items-center gap-2.5 whitespace-nowrap hover:shadow-xl hover:border-accent/30 transition-all duration-300 group cursor-default">
+                  {/* Desktop: full label */}
+                  <div className="hidden sm:flex bg-white shadow-lg shadow-black/5 border border-black/5 rounded-xl px-4 py-3 items-center gap-2.5 whitespace-nowrap hover:shadow-xl hover:border-accent/30 transition-all duration-300 group cursor-default">
                     <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                       {item.icon}
                     </div>
                     <span className="text-xs font-semibold text-primary/70">{item.label}</span>
+                  </div>
+                  {/* Mobile: icon only */}
+                  <div className="sm:hidden w-10 h-10 bg-white shadow-md border border-black/5 rounded-full flex items-center justify-center text-accent">
+                    {item.icon}
                   </div>
                 </div>
               );
@@ -115,28 +119,22 @@ export default function OrbitShowcase() {
 
           {/* Center logo */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 bg-accent/10 rounded-full flex items-center justify-center border-2 border-accent/20">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-accent/10 rounded-full flex items-center justify-center border-2 border-accent/20">
               <img
                 src="/images/logos/logo.png"
                 alt="Gründer Marketing Logo"
-                className="w-20 sm:w-24 h-auto"
+                className="w-14 sm:w-20 lg:w-24 h-auto"
               />
             </div>
           </div>
         </div>
 
-        {/* Mobile/Tablet fallback: Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 lg:hidden">
+        {/* Mobile labels below orbit */}
+        <div className="flex flex-wrap justify-center gap-2 mt-8 sm:hidden">
           {orbitItems.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white shadow-sm border border-black/5 rounded-xl p-4 flex items-center gap-3"
-            >
-              <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center text-accent shrink-0">
-                {item.icon}
-              </div>
-              <span className="text-xs font-semibold text-primary/70">{item.label}</span>
-            </div>
+            <span key={i} className="bg-accent/10 text-accent text-[10px] font-semibold px-3 py-1 rounded-full">
+              {item.label}
+            </span>
           ))}
         </div>
       </div>

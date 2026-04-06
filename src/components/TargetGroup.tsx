@@ -77,11 +77,10 @@ export default function TargetGroup() {
 
         {/* Section header */}
         <div className="text-center mb-16">
-          <div className="inline-flex flex-col items-center gap-1.5 mb-6">
-            <span className="text-xs font-semibold tracking-widest uppercase text-primary/40">
+          <div className="flex justify-center mb-6">
+            <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
               Zielgruppen
             </span>
-            <div className="w-10 h-0.5 bg-accent" />
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-primary leading-tight">
             Wem helfen{" "}

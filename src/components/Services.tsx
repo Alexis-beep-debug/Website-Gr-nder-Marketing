@@ -59,11 +59,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex flex-col items-center gap-1.5 mb-6">
-            <span className="text-xs font-semibold tracking-widest uppercase text-primary/40">
+          <div className="flex justify-center mb-6">
+            <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
               Leistungen
             </span>
-            <div className="w-10 h-0.5 bg-accent" />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
             Mit unseren Leistungen sichern wir{" "}

@@ -25,11 +25,11 @@ const challenges = [
 
 export default function Challenges() {
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-b from-[#faf8f5] to-white">
+    <section className="py-24 sm:py-32 bg-[#f5f5f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+          <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
             Herausforderungen
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-3 mb-4">

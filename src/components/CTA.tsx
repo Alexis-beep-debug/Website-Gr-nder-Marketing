@@ -8,7 +8,7 @@ export default function CTA() {
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/8 rounded-full blur-3xl" />
 
           <div className="relative z-10">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+            <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
               Jetzt starten
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-3 mb-4 sm:mb-6 leading-tight">

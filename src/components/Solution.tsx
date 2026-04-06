@@ -30,20 +30,21 @@ const steps = [
 ];
 
 export default function Solution() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
   const [lineHeight, setLineHeight] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      const sectionHeight = sectionRef.current.offsetHeight;
+      if (!timelineRef.current) return;
+      const rect = timelineRef.current.getBoundingClientRect();
+      const timelineHeight = timelineRef.current.offsetHeight;
       const windowHeight = window.innerHeight;
 
-      // Calculate how far we've scrolled through the section
-      const scrolled = windowHeight - rect.top;
-      const total = sectionHeight + windowHeight;
-      const progress = Math.min(Math.max(scrolled / total, 0), 1);
+      // Line grows as the timeline area scrolls through the viewport
+      // Start when top of timeline enters bottom of viewport
+      // End when bottom of timeline reaches top of viewport
+      const visibleTop = windowHeight - rect.top;
+      const progress = Math.min(Math.max(visibleTop / timelineHeight, 0), 1);
 
       setLineHeight(progress * 100);
     };
@@ -54,11 +55,11 @@ export default function Solution() {
   }, []);
 
   return (
-    <section id="loesung" className="py-24 sm:py-32 bg-[#f5f5f5]" ref={sectionRef}>
+    <section id="loesung" className="py-24 sm:py-32 bg-[#f5f5f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+          <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
             Unsere Lösung
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mt-3 mb-4">
@@ -78,13 +79,18 @@ export default function Solution() {
         </div>
 
         {/* Vertical Timeline */}
-        <div className="relative">
-          {/* Background line (static) */}
+        <div className="relative" ref={timelineRef}>
+          {/* Desktop: Center line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-primary/8 -translate-x-1/2 hidden lg:block" />
-
-          {/* Animated growing line */}
           <div
-            className="absolute left-1/2 top-0 w-px bg-accent -translate-x-1/2 hidden lg:block transition-none"
+            className="absolute left-1/2 top-0 w-px bg-accent -translate-x-1/2 hidden lg:block"
+            style={{ height: `${lineHeight}%` }}
+          />
+
+          {/* Mobile: Left line */}
+          <div className="absolute left-5 top-0 bottom-0 w-px bg-primary/8 lg:hidden" />
+          <div
+            className="absolute left-5 top-0 w-px bg-accent lg:hidden"
             style={{ height: `${lineHeight}%` }}
           />
 
@@ -93,15 +99,22 @@ export default function Solution() {
               const isEven = i % 2 === 0;
               return (
                 <div key={i} className="relative">
-                  {/* Timeline dot */}
+                  {/* Desktop: Timeline dot (center) */}
                   <div className="absolute left-1/2 top-8 -translate-x-1/2 z-10 hidden lg:flex items-center justify-center">
                     <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm border-4 border-[#f5f5f5]">
                       {step.number}
                     </div>
                   </div>
 
-                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                    {/* Image */}
+                  {/* Mobile: Timeline dot (left) */}
+                  <div className="absolute left-5 top-0 -translate-x-1/2 z-10 lg:hidden flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xs border-4 border-[#f5f5f5]">
+                      {step.number}
+                    </div>
+                  </div>
+
+                  {/* Desktop layout: alternating */}
+                  <div className="hidden lg:grid lg:grid-cols-2 gap-16 items-center">
                     <div className={`${isEven ? "lg:order-1" : "lg:order-2"}`}>
                       <div className="relative overflow-hidden rounded-md shadow-xl">
                         <img
@@ -112,21 +125,31 @@ export default function Solution() {
                         <div className="absolute inset-0 bg-accent/5" />
                       </div>
                     </div>
-
-                    {/* Text */}
                     <div className={`${isEven ? "lg:order-2 lg:pl-12" : "lg:order-1 lg:pr-12 lg:text-right"}`}>
-                      {/* Mobile number badge */}
-                      <div className={`lg:hidden mb-4 ${!isEven ? "flex justify-end" : ""}`}>
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white font-bold text-sm">
-                          {step.number}
-                        </span>
-                      </div>
                       <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
                         {step.title}
                       </h3>
                       <p className="text-muted leading-relaxed text-base sm:text-lg">
                         {step.description}
                       </p>
+                    </div>
+                  </div>
+
+                  {/* Mobile layout: all left-aligned */}
+                  <div className="lg:hidden pl-12">
+                    <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted leading-relaxed text-sm sm:text-base mb-4">
+                      {step.description}
+                    </p>
+                    <div className="relative overflow-hidden rounded-md shadow-lg">
+                      <img
+                        src={step.image}
+                        alt={step.imageAlt}
+                        className="w-full aspect-[4/3] object-cover"
+                      />
+                      <div className="absolute inset-0 bg-accent/5" />
                     </div>
                   </div>
                 </div>

@@ -1,24 +1,32 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 
 const navLinks = [
-  { label: "Startseite", href: "#hero" },
-  { label: "Leistungen", href: "#leistungen" },
-  { label: "Über", href: "#ueber-uns" },
-  { label: "Bewertungen", href: "#bewertungen" },
+  { label: "Startseite", href: "/#hero" },
+  { label: "Leistungen", href: "/#leistungen" },
+  { label: "Über", href: "/#ueber-uns" },
+  { label: "Bewertungen", href: "/#bewertungen" },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const getHref = (href: string) => {
+    if (isHome) return href.replace("/", "");
+    return href;
+  };
 
   return (
     <header
@@ -28,7 +36,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
-        <a href="#hero" className="group hover:opacity-90 transition-opacity">
+        <a href="/" className="group hover:opacity-90 transition-opacity">
           <Logo variant="dark" />
         </a>
 
@@ -37,7 +45,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={getHref(link.href)}
               className="text-sm font-medium text-primary/60 hover:text-accent transition-colors"
             >
               {link.label}
@@ -79,7 +87,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={getHref(link.href)}
                 onClick={() => setMenuOpen(false)}
                 className="text-base font-medium text-primary/60 hover:text-accent transition-colors py-2 border-b border-black/5 last:border-0"
               >
