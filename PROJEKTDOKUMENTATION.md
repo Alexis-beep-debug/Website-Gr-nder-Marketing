@@ -208,11 +208,29 @@
 | 31.03.2026 | Motion-Design: Marquee-Banner, Orbit-Showcase |
 | 31.03.2026 | Legal-Seiten: Impressum, Datenschutz, AGB erstellt |
 | 31.03.2026 | KPI-Dashboard mit Passwortschutz und Tracking-Pixel |
+| 06.04.2026 | Navbar: Dauerhaft weiß + Schatten (nicht nur beim Scrollen) |
+| 06.04.2026 | Hero: Malte-Deckblatt als Hintergrund, Gradient links→rechts, ergebnisorientierte Headline |
+| 06.04.2026 | Timeline: Scroll-Animation (Linie wächst mit Scroll), Timeline1-3 Bilder abwechselnd links/rechts |
+| 06.04.2026 | KPI-Bereich: Neue Werte (4 Kampagnen, 30+ Anfragen, 100% Zufriedenheit, 25 Partnermakler) |
+| 06.04.2026 | Orbit-Sektion: Komplett neu – Logo zentral, 6 rotierende Marketing-Methoden-Elemente |
+| 06.04.2026 | Über-uns: Neues Foto (malte-ueber-uns.png) eingebunden |
+| 06.04.2026 | Alle Bilder umbenannt (URL-sicher) und in /public/images/team/ organisiert |
+
+### Bilder-Inventar
+
+| Datei | Verwendung |
+|-------|-----------|
+| `public/images/team/malte-deckblatt.png` | Hero-Hintergrundbild |
+| `public/images/team/malte-ueber-uns.png` | Über-uns-Sektion |
+| `public/images/team/timeline1.png` | Timeline Step 01 |
+| `public/images/team/timeline2.jpg` | Timeline Step 02 |
+| `public/images/team/timeline3.jpg` | Timeline Step 03 |
+| `public/images/logos/logo.png` | Header, Footer, Orbit-Zentrum |
 
 ## Offene Punkte / TODOs
 
-- [ ] SSL: Weiterleitung bei IONOS auf `https://www.marketing-gruender.de` prüfen
-- [ ] Echte Projektbilder für Orbit-Showcase nachliefern
+- [x] SSL: Weiterleitung bei IONOS auf `https://www.marketing-gruender.de` prüfen
+- [x] Echte Projektbilder für Orbit-Showcase nachliefern → durch Methoden-Orbit ersetzt
 - [x] Echtes Foto von Malte-Valentin Gründer einbinden
 - [x] Firmenlogo einbinden
 - [x] Impressum-Seite erstellen
@@ -224,11 +242,15 @@
 - [x] Brandfarben aktualisieren (Schwarz/Grün/Weiß)
 - [x] Akzent-Schrift (Playfair Display) für Hervorhebungen
 - [x] Motion-Design: Scrollende Pills, Marquee-Banner, Orbit-Showcase
+- [x] Navbar dauerhaft weiß + Schatten
+- [x] Hero ergebnisorientiert umformuliert
+- [x] Timeline Scroll-Animation + echte Bilder
+- [x] KPI-Bereich aktualisiert
+- [x] Orbit-Sektion → Methoden-Darstellung mit 6 Faktoren
 - [ ] Kontaktformular integrieren (optional)
 - [ ] Google Analytics / Meta Pixel einrichten (produktiv)
-- [ ] Favicon erstellen und einbinden
 - [ ] Cookie-Banner implementieren
 
 ---
 
-*Letzte Aktualisierung: 31.03.2026*
+*Letzte Aktualisierung: 06.04.2026*
