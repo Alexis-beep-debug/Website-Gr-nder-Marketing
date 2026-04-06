@@ -45,10 +45,10 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
 }
 
 const stats = [
-  { value: 150, suffix: "+", label: "Generierte Leads", icon: "leads" },
-  { value: 47, suffix: "+", label: "Anfragen pro Monat", icon: "requests" },
-  { value: 12, suffix: "", label: "Aktive Kampagnen", icon: "campaigns" },
-  { value: 98, suffix: "%", label: "Kundenzufriedenheit", icon: "satisfaction" },
+  { value: 4, suffix: "", label: "Aktive Kampagnen", icon: "campaigns" },
+  { value: 30, suffix: "+", label: "Anfragen pro Monat", icon: "requests" },
+  { value: 100, suffix: "%", label: "Kundenzufriedenheit", icon: "satisfaction" },
+  { value: 25, suffix: "", label: "Partnermakler", icon: "partners" },
 ];
 
 export default function AnimatedCounter() {

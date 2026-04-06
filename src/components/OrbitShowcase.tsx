@@ -1,32 +1,51 @@
 "use client";
 
-import Logo from "@/components/Logo";
-
-const pillars = [
+const orbitItems = [
   {
-    label: "Growth",
-    sublabel: "Sichtbarkeit",
+    label: "Zielgruppenanalyse",
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
       </svg>
     ),
   },
   {
-    label: "Impact",
-    sublabel: "Performance",
+    label: "Zielgruppenverständnis",
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Emotionale Ansprache",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Performance Marketing",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
   },
   {
-    label: "DNA",
-    sublabel: "Kreativität",
+    label: "Funnel-Optimierung",
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Conversion-Steigerung",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
       </svg>
     ),
   },
@@ -34,74 +53,92 @@ const pillars = [
 
 export default function OrbitShowcase() {
   return (
-    <section className="relative bg-[#0d1f1a] py-24 sm:py-32 overflow-hidden">
-      {/* Subtle radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-24 sm:py-32 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <div className="inline-flex flex-col items-center gap-1.5 mb-6">
-            <span className="text-xs font-semibold tracking-widest uppercase text-accent/70">
-              Unsere Ergebnisse
+            <span className="text-xs font-semibold tracking-widest uppercase text-primary/40">
+              Unsere Methode
             </span>
             <div className="w-10 h-0.5 bg-accent" />
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
-            Projekte die{" "}
+          <h2 className="text-4xl sm:text-5xl font-bold text-primary leading-tight">
+            So{" "}
             <em
               style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontWeight: 600 }}
               className="text-accent"
             >
-              wirken
+              arbeiten
             </em>
+            {" "}wir
           </h2>
-          <p className="mt-4 text-white/40 text-lg max-w-xl mx-auto">
-            Ein Blick auf unsere Arbeiten – von Webseiten über Kampagnen bis hin zu kompletten Funnels.
+          <p className="mt-4 text-primary/50 text-lg max-w-xl mx-auto">
+            Sechs Faktoren, die Ihren Erfolg im digitalen Marketing sichern.
           </p>
         </div>
 
-        {/* Pillar layout */}
-        <div className="relative flex flex-col items-center">
-          {/* Top pillar */}
-          <div className="flex flex-col items-center mb-12 sm:mb-16">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-4 shadow-lg shadow-accent/10">
-              {pillars[0].icon}
-            </div>
-            <h3 className="text-white font-semibold text-lg">{pillars[0].label}</h3>
-            <p className="text-accent/60 text-sm">{`{${pillars[0].sublabel}}`}</p>
-          </div>
+        {/* Orbit visualization - desktop only */}
+        <div className="relative mx-auto w-full max-w-[600px] aspect-square hidden lg:block">
+          {/* Orbit rings */}
+          <div className="absolute inset-[10%] rounded-full border border-dashed border-accent/15" />
+          <div className="absolute inset-[25%] rounded-full border border-dashed border-accent/10" />
 
-          {/* Center logo with glow ring */}
-          <div className="relative mb-12 sm:mb-16">
-            <div className="absolute inset-0 rounded-full border border-accent/20 animate-pulse" style={{ margin: "-8px" }} />
-            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-[#1a2f28] border-2 border-accent/30 flex items-center justify-center shadow-2xl shadow-accent/20">
-              <Logo variant="light" size="small" />
-            </div>
-            {/* Connecting lines - visible on larger screens */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full w-px h-12 sm:h-16 bg-gradient-to-t from-accent/30 to-transparent hidden sm:block" />
-            <div className="absolute bottom-0 left-0 translate-y-full -translate-x-8 w-px h-12 sm:h-16 bg-gradient-to-b from-accent/30 to-transparent hidden sm:block rotate-[30deg] origin-top" />
-            <div className="absolute bottom-0 right-0 translate-y-full translate-x-8 w-px h-12 sm:h-16 bg-gradient-to-b from-accent/30 to-transparent hidden sm:block -rotate-[30deg] origin-top" />
-          </div>
+          {/* Rotating container */}
+          <div className="absolute inset-0 animate-orbit">
+            {orbitItems.map((item, i) => {
+              const angle = (i * 360) / orbitItems.length - 90;
+              const rad = (angle * Math.PI) / 180;
+              const radius = 44;
+              const x = 50 + radius * Math.cos(rad);
+              const y = 50 + radius * Math.sin(rad);
 
-          {/* Bottom two pillars */}
-          <div className="flex gap-16 sm:gap-32">
-            {pillars.slice(1).map((pillar, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-4 shadow-lg shadow-accent/10">
-                  {pillar.icon}
+              return (
+                <div
+                  key={i}
+                  className="absolute animate-orbit-counter"
+                  style={{
+                    left: `${x}%`,
+                    top: `${y}%`,
+                  }}
+                >
+                  <div className="bg-white shadow-lg shadow-black/5 border border-black/5 rounded-xl px-4 py-3 flex items-center gap-2.5 whitespace-nowrap hover:shadow-xl hover:border-accent/30 transition-all duration-300 group cursor-default">
+                    <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                      {item.icon}
+                    </div>
+                    <span className="text-xs font-semibold text-primary/70">{item.label}</span>
+                  </div>
                 </div>
-                <h3 className="text-white font-semibold text-base sm:text-lg">{pillar.label}</h3>
-                <p className="text-accent/60 text-sm">{`{${pillar.sublabel}}`}</p>
-              </div>
-            ))}
+              );
+            })}
+          </div>
+
+          {/* Center logo */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 bg-accent/10 rounded-full flex items-center justify-center border-2 border-accent/20">
+              <img
+                src="/images/logos/logo.png"
+                alt="Gründer Marketing Logo"
+                className="w-20 sm:w-24 h-auto"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Bottom text */}
-        <p className="text-center text-white/20 text-sm mt-16">
-          Unsere Projekte – individuell für jeden Kunden umgesetzt.
-        </p>
+        {/* Mobile/Tablet fallback: Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 lg:hidden">
+          {orbitItems.map((item, i) => (
+            <div
+              key={i}
+              className="bg-white shadow-sm border border-black/5 rounded-xl p-4 flex items-center gap-3"
+            >
+              <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center text-accent shrink-0">
+                {item.icon}
+              </div>
+              <span className="text-xs font-semibold text-primary/70">{item.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,27 +1,22 @@
 "use client";
 
-import { useRegion } from "@/hooks/useRegion";
-
 export default function Hero() {
-  const region = useRegion();
-  const regionText = region ? `in ${region}` : "";
-
   return (
     <section
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Background image - covers full section */}
+      {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/images/team/hero-bg.jpeg"
-          alt="Gründer Marketing Team"
-          className="w-full h-full object-cover object-center"
+          src="/images/team/malte-deckblatt.png"
+          alt="Malte-Valentin Gründer – Geschäftsführer Gründer Marketing"
+          className="w-full h-full object-cover object-right"
         />
       </div>
 
-      {/* Left gradient overlay - strong on left, fades to transparent on right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 via-45% to-transparent lg:to-40%" />
+      {/* Left gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 via-50% to-transparent lg:to-45%" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-20">
@@ -31,18 +26,27 @@ export default function Hero() {
             {/* Accent badge */}
             <div className="mb-8 animate-fade-in">
               <span className="inline-block bg-accent text-white text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-sm">
-                Marketing für Immobilienmakler
+                Für Immobilienmakler
               </span>
             </div>
 
-            {/* Headline */}
+            {/* Headline – ergebnisorientiert */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-primary/85 leading-[1.12] mb-6 animate-fade-in-up">
-              Vertrauensvolles und professionelles Marketing für Immobilienmakler{regionText ? ` ${regionText}` : ""}.
+              Jeden Monat neue{" "}
+              <em
+                style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontWeight: 600 }}
+                className="text-accent"
+              >
+                Alleinaufträge
+              </em>
+              {" "}– planbar und digital.
             </h1>
 
-            {/* Subtext */}
+            {/* Subtext – nutzenorientiert */}
             <p className="text-base sm:text-lg text-primary/50 leading-relaxed mb-10 max-w-lg animate-fade-in-up animation-delay-200">
-              Wir sorgen dafür, dass Eigentümer und Käufer auf Sie zukommen – planbar, digital und ohne Kaltakquise.
+              Ohne auf Empfehlungen, Netzwerk oder Kaltakquise zu warten.
+              Wir bauen Ihnen ein digitales System, das Eigentümer und Käufer
+              direkt auf Sie zukommen lässt.
             </p>
 
             {/* CTA Buttons */}
@@ -56,7 +60,7 @@ export default function Hero() {
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
                 </svg>
-                Beratungsgespräch buchen
+                Kostenlose Analyse sichern
               </a>
               <a
                 href="#loesung"
@@ -68,9 +72,27 @@ export default function Hero() {
                 </svg>
               </a>
             </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center gap-6 mt-12 pt-8 border-t border-primary/5 animate-fade-in-up animation-delay-600">
+              <div className="text-center">
+                <span className="block text-2xl font-bold text-accent">30+</span>
+                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Anfragen/Monat</span>
+              </div>
+              <div className="w-px h-8 bg-primary/10" />
+              <div className="text-center">
+                <span className="block text-2xl font-bold text-accent">100%</span>
+                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Individuell</span>
+              </div>
+              <div className="w-px h-8 bg-primary/10" />
+              <div className="text-center">
+                <span className="block text-2xl font-bold text-accent">KI</span>
+                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Gestützt</span>
+              </div>
+            </div>
           </div>
 
-          {/* Right: empty - the background image shows through */}
+          {/* Right: empty - background image shows through */}
           <div className="hidden lg:block" />
         </div>
       </div>
