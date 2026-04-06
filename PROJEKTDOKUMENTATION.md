@@ -215,6 +215,11 @@
 | 06.04.2026 | Orbit-Sektion: Komplett neu – Logo zentral, 6 rotierende Marketing-Methoden-Elemente |
 | 06.04.2026 | Über-uns: Neues Foto (malte-ueber-uns.png) eingebunden |
 | 06.04.2026 | Alle Bilder umbenannt (URL-sicher) und in /public/images/team/ organisiert |
+| 06.04.2026 | Section-Labels: Alle zu Pill-Badge-Style (rounded-full, bg-accent/15) |
+| 06.04.2026 | Navigation-Fix: Header/Footer nutzen absolute Pfade (/#section), Logo → /, funktioniert auf Unterseiten |
+| 06.04.2026 | Challenges-Hintergrund auf #f5f5f5 (einheitlich mit Rest der Seite) |
+| 06.04.2026 | Timeline: Scroll-Sync direkt an Timeline-Bereich gekoppelt (schneller), Mobile links ausgerichtet |
+| 06.04.2026 | Orbit: Mobile zeigt echten Kreis (verkleinert, Icons only) statt Grid-Fallback |
 
 ### Bilder-Inventar
 
@@ -247,10 +252,15 @@
 - [x] Timeline Scroll-Animation + echte Bilder
 - [x] KPI-Bereich aktualisiert
 - [x] Orbit-Sektion → Methoden-Darstellung mit 6 Faktoren
+- [x] Section-Labels als Pill-Badges (Screenshot-Referenz)
+- [x] Navigation auf Unterseiten (Impressum etc.) funktioniert jetzt korrekt
+- [x] Hintergrundfarbe unter Hero vereinheitlicht
+- [x] Timeline Mobile: links ausgerichtet mit vertikaler Linie
+- [x] Orbit Mobile: Kreis-Darstellung statt Grid
 - [ ] Kontaktformular integrieren (optional)
 - [ ] Google Analytics / Meta Pixel einrichten (produktiv)
 - [ ] Cookie-Banner implementieren
 
 ---
 
-*Letzte Aktualisierung: 06.04.2026*
+*Letzte Aktualisierung: 06.04.2026 (v2)*
