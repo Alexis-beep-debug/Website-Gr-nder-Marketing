@@ -102,10 +102,10 @@ export default function CTA() {
                 Termin buchen
               </a>
               <a
-                href="mailto:info@marketing-gruender.de"
+                href="tel:+491754024912"
                 className="border border-white/25 text-white/80 hover:bg-white/10 px-8 sm:px-12 py-4 sm:py-5 rounded-sm text-base sm:text-lg font-semibold transition-all hover:-translate-y-0.5 w-full sm:w-auto text-center relative z-20"
               >
-                E-Mail schreiben
+                Anrufen
               </a>
             </div>
           </div>

@@ -23,7 +23,7 @@ export default function MarqueeBanner() {
       {/* Right fade */}
       <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#f5f5f5] to-transparent z-10 pointer-events-none" />
 
-      <div className="flex items-center gap-2 w-max animate-marquee">
+      <div className="flex items-center gap-2 w-max animate-marquee" style={{ minWidth: "max-content" }}>
         {tags.map((tag, i) => (
           <div key={i} className="flex items-center gap-2 shrink-0">
             {/* Dot separator */}

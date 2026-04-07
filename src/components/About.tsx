@@ -84,7 +84,7 @@ export default function About() {
             {/* Stats */}
             <div className="flex gap-6">
               <div className="text-center">
-                <span className="block text-2xl font-bold text-accent">3+</span>
+                <span className="block text-2xl font-bold text-accent">2+</span>
                 <span className="text-[10px] text-primary/40 uppercase tracking-wider">Jahre Erfahrung</span>
               </div>
               <div className="w-px bg-primary/10" />

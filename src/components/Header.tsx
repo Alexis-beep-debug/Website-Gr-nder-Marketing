@@ -66,7 +66,7 @@ export default function Header() {
           {/* Phone button */}
           <a
             href="tel:+491754024912"
-            className="w-10 h-10 rounded-full border border-primary/10 flex items-center justify-center text-primary/60 hover:text-accent hover:border-accent/30 transition-colors"
+            className="px-3 py-2 rounded-sm border border-primary/10 flex items-center justify-center text-primary/60 hover:text-accent hover:border-accent/30 transition-colors"
             aria-label="Anrufen"
           >
             <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.8}>

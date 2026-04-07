@@ -25,7 +25,7 @@ export default function Footer() {
                 ["Startseite", "/#hero"],
                 ["Lösung", "/#loesung"],
                 ["Leistungen", "/#leistungen"],
-                ["Über uns", "/#ueber-uns"],
+                ["Über", "/#ueber-uns"],
                 ["FAQ", "/#faq"],
               ].map(([label, href]) => (
                 <li key={href}>
