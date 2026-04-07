@@ -36,8 +36,7 @@ export default function Challenges() {
             Kennen Sie diese Probleme im Immobiliengeschäft?
           </h2>
           <p className="text-muted leading-relaxed">
-            Viele Makler stehen vor den gleichen Herausforderungen. Wir kennen
-            diese Probleme – und haben die Lösung.
+            Wir kennen diese Probleme aus erster Hand.
           </p>
         </div>
 

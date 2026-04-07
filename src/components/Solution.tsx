@@ -8,7 +8,7 @@ const steps = [
     title: "Regionale Marktpräsenz",
     description:
       "Etablierung Ihrer Immobilienkompetenz in der Marktregion. Wir gewährleisten eine durchgängige Sichtbarkeit bei den relevanten Eigentümern und Interessenten auf digitalen Kanälen.",
-    image: "/images/team/timeline1.png",
+    image: "/images/team/timeline1-neu.avif",
     imageAlt: "Regionale Marktpräsenz aufbauen",
   },
   {
@@ -40,11 +40,12 @@ export default function Solution() {
       const timelineHeight = timelineRef.current.offsetHeight;
       const windowHeight = window.innerHeight;
 
-      // Line grows as the timeline area scrolls through the viewport
-      // Start when top of timeline enters bottom of viewport
-      // End when bottom of timeline reaches top of viewport
-      const visibleTop = windowHeight - rect.top;
-      const progress = Math.min(Math.max(visibleTop / timelineHeight, 0), 1);
+      // Line grows exactly in sync with scroll position
+      // Start: when top of timeline hits center of viewport
+      // End: when bottom of timeline hits center of viewport
+      const scrollCenter = windowHeight / 2;
+      const scrolledPast = scrollCenter - rect.top;
+      const progress = Math.min(Math.max(scrolledPast / timelineHeight, 0), 1);
 
       setLineHeight(progress * 100);
     };
@@ -72,25 +73,23 @@ export default function Solution() {
             </em>
           </h2>
           <p className="text-muted leading-relaxed">
-            Wir analysieren Ihre aktuelle Akquise- und Vermarktungssituation und
-            entwickeln eine individuelle Strategie, die Empfehlungsgeschäft und
-            unrentable Marketing-Maßnahmen ablöst.
+            Von der Analyse bis zum planbaren Wachstum in drei Schritten.
           </p>
         </div>
 
         {/* Vertical Timeline */}
         <div className="relative" ref={timelineRef}>
           {/* Desktop: Center line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-primary/8 -translate-x-1/2 hidden lg:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-[3px] bg-primary/8 -translate-x-1/2 hidden lg:block" />
           <div
-            className="absolute left-1/2 top-0 w-px bg-accent -translate-x-1/2 hidden lg:block"
+            className="absolute left-1/2 top-0 w-[3px] bg-accent -translate-x-1/2 hidden lg:block"
             style={{ height: `${lineHeight}%` }}
           />
 
           {/* Mobile: Left line */}
-          <div className="absolute left-5 top-0 bottom-0 w-px bg-primary/8 lg:hidden" />
+          <div className="absolute left-5 top-0 bottom-0 w-[3px] bg-primary/8 lg:hidden" />
           <div
-            className="absolute left-5 top-0 w-px bg-accent lg:hidden"
+            className="absolute left-5 top-0 w-[3px] bg-accent lg:hidden"
             style={{ height: `${lineHeight}%` }}
           />
 

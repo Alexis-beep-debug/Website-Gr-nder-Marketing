@@ -51,7 +51,7 @@ export default function DatenschutzPage() {
             Datenschutz&shy;erklärung
           </h1>
           <p className="mt-4 text-primary/60 text-lg">
-            Zuletzt aktualisiert: 31. März 2026
+            Zuletzt aktualisiert: 7. April 2026
           </p>
         </div>
 
@@ -116,27 +116,14 @@ export default function DatenschutzPage() {
           {/* 2. Hosting */}
           <div className="pt-14">
             <Section title="2. Hosting">
-              <SubSection title="onepage.io">
+              <SubSection title="Railway / Vercel">
                 <p>
-                  Wir hosten die Inhalte unserer Website bei <Highlight>onepage.io</Highlight>. Anbieter ist
-                  die Onepage GmbH, Neue Rothofstr.{"\u00A0"}13–19, 60313 Frankfurt am Main.
-                </p>
-                <p>
-                  onepage.io ermöglicht es uns, Webseiten und Landingpages zu bauen. Alle personenbezogenen
-                  Daten, die Sie auf dieser Seite eingeben oder die automatisch erfasst werden, werden von
-                  onepage.io verarbeitet und auf deren Servern gespeichert.
+                  Wir hosten unsere Website auf <Highlight>Railway</Highlight> (Railway Corporation, USA). Alle personenbezogenen
+                  Daten, die auf dieser Seite erfasst werden, werden auf Servern von Railway verarbeitet und gespeichert.
                 </p>
                 <p>
                   Rechtsgrundlage:{" "}
-                  <Tag>Art. 6 Abs. 1 lit. f DSGVO</Tag>. Weitere Details:{" "}
-                  <a
-                    href="https://onepage.io/de/datenschutzerklarung"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-accent hover:underline break-all"
-                  >
-                    https://onepage.io/de/datenschutzerklarung
-                  </a>
+                  <Tag>Art. 6 Abs. 1 lit. f DSGVO</Tag>.
                 </p>
               </SubSection>
             </Section>
@@ -284,14 +271,19 @@ export default function DatenschutzPage() {
                   basis: "Art. 6 Abs. 1 lit. b DSGVO",
                 },
                 {
-                  name: "Google Ads",
-                  desc: "Wir nutzen Google Ads inklusive Conversion-Tracking. Anbieter: Google Ireland Limited.",
-                  basis: "Art. 6 Abs. 1 lit. a DSGVO",
+                  name: "Claude AI",
+                  desc: "Zur Unterstützung bei der Erstellung von Marketinginhalten und strategischer Beratung setzen wir Claude AI von Anthropic ein. Dabei werden keine personenbezogenen Kundendaten an den Dienst übermittelt. Die Verarbeitung erfolgt ausschließlich für interne Zwecke.",
+                  basis: "Art. 6 Abs. 1 lit. f DSGVO",
                 },
                 {
-                  name: "ChatGPT",
-                  desc: "Zur Unterstützung bei Nutzeranfragen. Eingegebene Daten können an Server von OpenAI übermittelt werden.",
-                  basis: "Art. 6 Abs. 1 lit. a DSGVO",
+                  name: "Close CRM",
+                  desc: "Zur Verwaltung von Kundenbeziehungen und Kommunikation nutzen wir Close CRM. Dabei werden Kontaktdaten wie Name, E-Mail-Adresse und Telefonnummer gespeichert. Anbieter: Elastic Inc., USA. Es besteht ein Auftragsverarbeitungsvertrag.",
+                  basis: "Art. 6 Abs. 1 lit. b DSGVO",
+                },
+                {
+                  name: "Google Docs / Sheets",
+                  desc: "Für die gemeinsame Dokumentation und Projektarbeit nutzen wir Google Docs und Google Sheets. Dabei können projektbezogene Daten verarbeitet werden. Anbieter: Google Ireland Limited.",
+                  basis: "Art. 6 Abs. 1 lit. b DSGVO",
                 },
                 {
                   name: "Google Meet",

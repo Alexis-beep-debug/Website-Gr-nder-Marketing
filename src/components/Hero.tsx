@@ -4,33 +4,33 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden bg-[#f5f5f5]"
     >
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/images/team/malte-deckblatt.png"
-          alt="Malte-Valentin Gründer – Geschäftsführer Gründer Marketing"
-          className="w-full h-full object-cover object-right"
+          src="/images/team/malte-deckblatt-neu.png"
+          alt="Malte-Valentin Gründer"
+          className="w-full h-full object-cover object-[70%_center]"
         />
       </div>
 
-      {/* Left gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 via-50% to-transparent lg:to-45%" />
+      {/* Subtle overlay for cohesion */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#f5f5f5] via-[#f5f5f5]/85 via-45% to-[#f5f5f5]/20 lg:to-transparent" />
+      <div className="absolute inset-0 bg-[#f5f5f5]/10" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Text content */}
           <div>
-            {/* Accent badge */}
+            {/* Badge */}
             <div className="mb-8 animate-fade-in">
               <span className="inline-block bg-accent text-white text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-sm">
                 Für Immobilienmakler
               </span>
             </div>
 
-            {/* Headline – ergebnisorientiert */}
+            {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-primary/85 leading-[1.12] mb-6 animate-fade-in-up">
               Jeden Monat neue{" "}
               <em
@@ -39,17 +39,17 @@ export default function Hero() {
               >
                 Alleinaufträge
               </em>
-              {" "}– planbar und digital.
+              {" "}sichern.
             </h1>
 
-            {/* Subtext – nutzenorientiert */}
+            {/* Subheadline */}
             <p className="text-base sm:text-lg text-primary/50 leading-relaxed mb-10 max-w-lg animate-fade-in-up animation-delay-200">
-              Ohne auf Empfehlungen, Netzwerk oder Kaltakquise zu warten.
-              Wir bauen Ihnen ein digitales System, das Eigentümer und Käufer
-              direkt auf Sie zukommen lässt.
+              Eigentümer kommen aktiv auf Sie zu und wollen verkaufen. Unser
+              digitales System macht Sie in Ihrer Region sichtbar und generiert
+              qualifizierte Anfragen auf Autopilot.
             </p>
 
-            {/* CTA Buttons */}
+            {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-400">
               <a
                 href="https://calendly.com/business-gruender/analysegesprach-gruender-marketing"
@@ -73,7 +73,7 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Trust indicators */}
+            {/* Trust */}
             <div className="flex flex-wrap items-center gap-6 mt-12 pt-8 border-t border-primary/5 animate-fade-in-up animation-delay-600">
               <div className="text-center">
                 <span className="block text-2xl font-bold text-accent">30+</span>
@@ -92,7 +92,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: empty - background image shows through */}
           <div className="hidden lg:block" />
         </div>
       </div>

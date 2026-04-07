@@ -41,7 +41,7 @@ export default function About() {
             <div className="bg-gradient-to-br from-primary to-primary-light rounded-md aspect-[4/5] overflow-hidden">
               <img
                 src="/images/team/malte-ueber-uns.png"
-                alt="Malte-Valentin Gründer – Gründer & Geschäftsführer von Gründer Marketing"
+                alt="Malte-Valentin Gründer, Gründer & Geschäftsführer von Gründer Marketing"
                 className="w-full h-full object-cover object-center"
               />
             </div>

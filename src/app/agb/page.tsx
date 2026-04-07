@@ -189,8 +189,9 @@ export default function AGBPage() {
               </p>
               <BulletList
                 items={[
-                  "Als qualifizierter Lead gilt nur eine Anfrage mit vollständig ausgefüllten Pflichtfragen.",
-                  "Bei Nichterreichen des Ziels arbeitet Gründer Marketing ohne zusätzliches Honorar weiter.",
+                  "Als qualifizierter Lead gilt eine Anfrage, bei der alle Pflichtfragen beantwortet und vollständige Kontaktdaten abgegeben wurden. Dies gilt unabhängig von der Quelle (Landingpage, Facebook-Formular oder externe Tools).",
+                  "Die Garantie bezieht sich ausschließlich auf die Erbringung der vertraglich vereinbarten Leistungen. Für Website- oder SEO-Ergebnisse wird keine gesonderte Garantie übernommen.",
+                  "Bei Nichterreichen des vereinbarten Ziels arbeitet Gründer Marketing ohne zusätzliches Honorar weiter, bis das definierte Ziel erreicht ist.",
                   "Das Werbebudget trägt weiterhin der Kunde.",
                 ]}
               />

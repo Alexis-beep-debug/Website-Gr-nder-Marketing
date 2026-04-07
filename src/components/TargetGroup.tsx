@@ -92,7 +92,7 @@ export default function TargetGroup() {
             </em>
           </h2>
           <p className="mt-4 text-primary/50 text-lg max-w-xl mx-auto">
-            Wir arbeiten mit Unternehmen aus der Immobilienbranche – zugeschnitten auf Ihre Ausgangslage.
+            Spezialisiert auf die Immobilienbranche. Zugeschnitten auf Ihre Situation.
           </p>
         </div>
 

@@ -8,6 +8,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import Advantages from "@/components/Advantages";
 import OrbitShowcase from "@/components/OrbitShowcase";
 import Testimonials from "@/components/Testimonials";
+import Comparison from "@/components/Comparison";
 import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -39,6 +40,9 @@ export default function Home() {
       </ScrollReveal>
       <ScrollReveal>
         <Testimonials />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Comparison />
       </ScrollReveal>
       <ScrollReveal>
         <About />
