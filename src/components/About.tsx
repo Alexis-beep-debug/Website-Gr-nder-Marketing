@@ -76,82 +76,82 @@ export default function About() {
 
         {/* Mission – Flow: Makler → Gründer Marketing → Ergebnisse */}
         <div className="relative bg-[#f5f5f5] rounded-md overflow-hidden p-6 sm:p-10 md:p-14 mb-14 sm:mb-20">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Left: Text */}
-            <div className="text-center lg:text-left">
-              <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4">
-                Unsere Mission
-              </span>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
-                Immobilienmakler zukunftsstark.
-              </h3>
-              <p className="text-primary/50 leading-relaxed text-base sm:text-lg">
-                Gründer Marketing wurde ins Leben gerufen, um Immobilienmakler als
-                professioneller Partner an der Seite zu unterstützen. Wir helfen
-                dabei, Alleinaufträge zu gewinnen, damit Ihr Geschäft planbar wächst
-                und Sie sich auf Ihre Kunden konzentrieren können.
-              </p>
+          {/* Header */}
+          <div className="text-center mb-10">
+            <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4">
+              Unsere Mission
+            </span>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mt-2 mb-4">
+              Immobilienmakler zukunftsstark.
+            </h3>
+            <p className="text-primary/50 leading-relaxed text-base sm:text-lg max-w-2xl mx-auto">
+              Wir unterstützen Immobilienmakler als professioneller Partner, damit
+              Ihr Geschäft planbar wächst und Sie sich auf Ihre Kunden konzentrieren können.
+            </p>
+          </div>
+
+          {/* Flow diagram – centered */}
+          <div className="max-w-md mx-auto">
+            {/* Step 1: Makler */}
+            <div className="flex justify-center mb-3">
+              <div className="bg-white rounded-xl shadow-md border border-primary/8 px-8 py-5 text-center">
+                <svg className="w-8 h-8 text-accent mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span className="text-base font-bold text-primary">Makler</span>
+              </div>
             </div>
 
-            {/* Right: Vertical flow diagram */}
-            <div className="relative w-full max-w-[280px] mx-auto">
-              {/* SVG flow lines */}
-              <svg className="absolute left-1/2 top-0 h-full w-4 -translate-x-1/2 z-0" viewBox="0 0 16 400" fill="none" preserveAspectRatio="none">
-                <line x1="8" y1="60" x2="8" y2="150" stroke="#5B7D73" strokeWidth="2" strokeDasharray="4 4" opacity="0.3" />
-                <line x1="8" y1="210" x2="8" y2="290" stroke="#5B7D73" strokeWidth="2" strokeDasharray="4 4" opacity="0.3" />
-                {/* Animated pulse dot going down */}
-                <circle r="4" fill="#5B7D73" opacity="0.6">
-                  <animateMotion dur="3s" repeatCount="indefinite" path="M 8,60 L 8,290" />
-                </circle>
+            {/* Dashed line + arrow */}
+            <div className="flex justify-center py-1">
+              <div className="flex flex-col items-center gap-0">
+                <div className="w-px h-6 border-l-2 border-dashed border-accent/30" />
+                <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Step 2: Gründer Marketing */}
+            <div className="flex justify-center mb-3">
+              <div className="bg-accent rounded-xl shadow-lg px-8 py-5 text-center">
+                <img src="/images/logos/logo-white.svg" alt="Gründer Marketing" className="h-8 w-auto mx-auto mb-2" />
+                <span className="text-base font-bold text-white">Gründer Marketing</span>
+              </div>
+            </div>
+
+            {/* Branching lines down – SVG "arms" */}
+            <div className="flex justify-center py-1">
+              <svg width="280" height="40" viewBox="0 0 280 40" fill="none" className="max-w-full">
+                {/* Center line down */}
+                <line x1="140" y1="0" x2="140" y2="12" stroke="#5B7D73" strokeWidth="2" strokeDasharray="4 3" opacity="0.4" />
+                {/* Left branch */}
+                <path d="M140 12 Q140 24 50 36" stroke="#5B7D73" strokeWidth="2" strokeDasharray="4 3" fill="none" opacity="0.4" />
+                {/* Center branch */}
+                <line x1="140" y1="12" x2="140" y2="36" stroke="#5B7D73" strokeWidth="2" strokeDasharray="4 3" opacity="0.4" />
+                {/* Right branch */}
+                <path d="M140 12 Q140 24 230 36" stroke="#5B7D73" strokeWidth="2" strokeDasharray="4 3" fill="none" opacity="0.4" />
+                {/* Dots at branch ends */}
+                <circle cx="50" cy="36" r="3" fill="#5B7D73" opacity="0.3" />
+                <circle cx="140" cy="36" r="3" fill="#5B7D73" opacity="0.3" />
+                <circle cx="230" cy="36" r="3" fill="#5B7D73" opacity="0.3" />
               </svg>
+            </div>
 
-              {/* Step 1: Makler (top) */}
-              <div className="relative z-10 flex justify-center mb-6">
-                <div className="bg-white rounded-lg shadow-md border border-primary/8 px-6 py-4 text-center">
-                  <svg className="w-7 h-7 text-accent mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            {/* Step 3: Three results */}
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { text: "Planbare Aufträge", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+                { text: "Keine Auftragsnot", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+                { text: "Mehr Zeit fürs Kerngeschäft", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+              ].map((result, i) => (
+                <div key={i} className="bg-white border border-accent/15 rounded-xl p-4 text-center shadow-sm animate-float" style={{ animationDelay: `${i * 0.5}s` }}>
+                  <svg className="w-6 h-6 text-accent mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d={result.icon} />
                   </svg>
-                  <span className="text-sm font-semibold text-primary">Makler</span>
+                  <span className="text-[11px] sm:text-xs font-semibold text-primary/60 leading-tight block">{result.text}</span>
                 </div>
-              </div>
-
-              {/* Arrow down */}
-              <div className="flex justify-center mb-6">
-                <svg className="w-5 h-5 text-accent animate-bounce" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" style={{ animationDuration: "2s" }}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-                </svg>
-              </div>
-
-              {/* Step 2: Gründer Marketing (center) – green, not black */}
-              <div className="relative z-10 flex justify-center mb-6">
-                <div className="bg-accent rounded-lg shadow-lg px-6 py-4 text-center">
-                  <img src="/images/logos/logo-white.svg" alt="Gründer Marketing" className="w-10 h-auto mx-auto mb-2" />
-                  <span className="text-sm font-semibold text-white">Gründer Marketing</span>
-                </div>
-              </div>
-
-              {/* Arrow down */}
-              <div className="flex justify-center mb-6">
-                <svg className="w-5 h-5 text-accent animate-bounce" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" style={{ animationDuration: "2s", animationDelay: "0.5s" }}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-                </svg>
-              </div>
-
-              {/* Step 3: Ergebnisse (bottom) – side by side, floating */}
-              <div className="relative z-10 grid grid-cols-3 gap-2">
-                {[
-                  { text: "Planbare Aufträge", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
-                  { text: "Keine Auftragsnot", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
-                  { text: "Mehr Zeit", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
-                ].map((result, i) => (
-                  <div key={i} className="bg-accent/8 border border-accent/15 rounded-lg p-3 text-center animate-float" style={{ animationDelay: `${i * 0.4}s` }}>
-                    <svg className="w-5 h-5 text-accent mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d={result.icon} />
-                    </svg>
-                    <span className="text-[10px] font-semibold text-primary/60">{result.text}</span>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
