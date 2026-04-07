@@ -38,15 +38,16 @@ export default function About() {
         {/* Founder Section */}
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center mb-16 sm:mb-24">
           <div className="relative">
-            <div className="bg-gradient-to-br from-primary to-primary-light rounded-md aspect-[4/5] overflow-hidden">
+            <div className="rounded-xl overflow-hidden shadow-2xl shadow-accent/10">
               <img
                 src="/images/team/malte-ueber-uns.png"
                 alt="Malte-Valentin Gründer, Gründer & Geschäftsführer von Gründer Marketing"
-                className="w-full h-full object-cover object-center"
+                className="w-full aspect-[4/5] object-cover object-center"
               />
             </div>
-            {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-md -z-10" />
+            {/* Decorative elements */}
+            <div className="absolute -bottom-3 -right-3 w-20 h-20 bg-accent/15 rounded-xl -z-10" />
+            <div className="absolute -top-3 -left-3 w-16 h-16 bg-accent/10 rounded-xl -z-10" />
           </div>
 
           {/* Text */}
@@ -60,17 +61,38 @@ export default function About() {
             <p className="text-accent font-semibold mb-6">
               Gründer & Geschäftsführer
             </p>
-            <blockquote className="text-muted leading-relaxed text-base sm:text-lg border-l-4 border-accent pl-4 sm:pl-6 mb-8 italic">
-              &ldquo;Ich habe selbst als Makler und in der Hausverwaltung
-              gearbeitet. Ich weiß also genau, was es bedeutet, täglich
-              Eigentümer zu akquirieren und gleichzeitig das laufende Geschäft am
-              Leben zu halten.&rdquo;
-            </blockquote>
-            <p className="text-muted leading-relaxed">
-              Dieses Branchenwissen kombiniert er mit Marketingwissen aus
-              Erfahrung und dem Einsatz aktueller Tools. Als junger Gründer kennt
-              er die neuesten Trends und wendet sie direkt für seine Kunden an.
+
+            {/* Quote with accent design */}
+            <div className="relative bg-accent/[0.04] border-l-4 border-accent rounded-r-xl p-5 sm:p-6 mb-8">
+              <svg className="absolute top-3 right-4 w-8 h-8 text-accent/10" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+              <p className="text-primary/60 leading-relaxed text-base sm:text-lg italic relative z-10">
+                Ich habe selbst als Makler und in der Hausverwaltung
+                gearbeitet. Ich weiß genau, was es bedeutet, täglich
+                Eigentümer zu akquirieren und gleichzeitig das laufende Geschäft am
+                Leben zu halten.
+              </p>
+            </div>
+
+            <p className="text-muted leading-relaxed mb-6">
+              Dieses Branchenwissen kombiniert er mit Marketingexpertise und
+              dem Einsatz modernster Tools. Als junger Gründer kennt er die
+              neuesten Trends und wendet sie direkt für seine Kunden an.
             </p>
+
+            {/* Mini stats */}
+            <div className="flex gap-6">
+              <div className="text-center">
+                <span className="block text-2xl font-bold text-accent">10+</span>
+                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Jahre Erfahrung</span>
+              </div>
+              <div className="w-px bg-primary/10" />
+              <div className="text-center">
+                <span className="block text-2xl font-bold text-accent">2</span>
+                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Branchen vereint</span>
+              </div>
+            </div>
           </div>
         </div>
 

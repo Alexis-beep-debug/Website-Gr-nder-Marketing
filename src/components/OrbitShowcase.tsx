@@ -21,7 +21,7 @@ export default function OrbitShowcase() {
 
     let angle = 0;
     let animId: number;
-    const speed = 0.04; // degrees per frame – slow, elegant rotation
+    const speed = 0.08; // degrees per frame – moderate, elegant rotation
 
     const items = container.querySelectorAll<HTMLElement>(".orbit-el");
     const count = items.length;
