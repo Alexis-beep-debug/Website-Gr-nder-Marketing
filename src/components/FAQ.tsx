@@ -4,29 +4,44 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Wie funktioniert die Dienstleistung?",
+    question: "Wie läuft die Zusammenarbeit ab?",
     answer:
-      "Wir starten mit einer umfassenden Analyse Ihrer aktuellen Situation, Region und Zielgruppe. Darauf aufbauend entwickeln wir eine individuelle Strategie, die digitale Kampagnen, Landingpages und regionale Sichtbarkeit kombiniert. Sie erhalten kontinuierlich qualifizierte Kontaktanfragen von Eigentümern und Käufern.",
+      "Wir starten mit einem kostenlosen Analysegespräch, in dem wir Ihre aktuelle Situation, Region und Ziele besprechen. Darauf aufbauend entwickeln wir eine individuelle Strategie und setzen diese operativ um. Sie erhalten regelmäßige Updates und haben jederzeit einen direkten Draht zur Geschäftsführung.",
   },
   {
-    question: "Was sind die Kosten?",
+    question: "Was kostet die Zusammenarbeit?",
     answer:
-      "Die Kosten richten sich nach Ihrem individuellen Bedarf und Ihrer Region. In einem kostenlosen Erstgespräch analysieren wir Ihre Situation und erstellen Ihnen ein maßgeschneidertes Angebot. Unsere Lösungen sind so gestaltet, dass sie sich schnell amortisieren.",
+      "Die Investition richtet sich nach Ihrem individuellen Bedarf und dem Umfang der Maßnahmen. In einem unverbindlichen Erstgespräch analysieren wir Ihre Situation und erstellen ein transparentes Angebot. Unsere Lösungen sind so konzipiert, dass sie sich über die gewonnenen Aufträge schnell refinanzieren.",
   },
   {
-    question: "Was bieten Sie genau an?",
+    question: "Wie schnell sehe ich erste Ergebnisse?",
     answer:
-      "Unsere drei Kernleistungen sind: Objekt-Akquise & Eigentümergewinnung durch Meta-Kampagnen und regionale Sichtbarkeit, Objektvermarktung & Käufergewinnung für schnellere Verkäufe zu besseren Preisen, sowie professionelle Maklerwebsites, die Ihre Expertenposition unterstreichen.",
+      "In der Regel erhalten Sie bereits in den ersten Wochen nach Kampagnenstart erste qualifizierte Anfragen. Die volle Wirkung entfaltet sich typischerweise nach 4 bis 8 Wochen, wenn das System optimiert ist und Ihre regionale Sichtbarkeit stetig wächst.",
   },
   {
-    question: "Wer tritt in der Werbung auf?",
+    question: "Was unterscheidet euch von anderen Marketing-Agenturen?",
     answer:
-      "Sie treten selbst als Experte in Ihrer Region auf. Wir erstellen die Kampagnen und Werbemittel in Ihrem Namen und mit Ihrem Branding. So stärken wir Ihre persönliche Marke und Ihren Expertenstatus in der Region.",
+      "Wir kommen selbst aus der Immobilienbranche und verstehen Ihr Geschäft aus erster Hand. Statt generischer Kampagnen entwickeln wir individuelle Strategien für Ihre Region. Dazu kommt: Sie arbeiten direkt mit der Geschäftsführung, nicht mit wechselnden Ansprechpartnern.",
   },
   {
-    question: "Woher kommen die Kontaktanfragen?",
+    question: "Welche Plattformen nutzt ihr für die Kampagnen?",
     answer:
-      "Die Kontaktanfragen kommen von gezielten digitalen Kampagnen auf Meta-Plattformen (Facebook & Instagram), optimierten Landingpages und Ihrer regionalen digitalen Präsenz. Alle Anfragen sind qualifiziert und stammen von Eigentümern und Kaufinteressenten aus Ihrer Region.",
+      "Wir setzen primär auf Meta-Plattformen (Facebook & Instagram), da hier Eigentümer und Kaufinteressenten gezielt in relevanten Lebenssituationen angesprochen werden können. Ergänzend arbeiten wir mit optimierten Landingpages und regionalem SEO.",
+  },
+  {
+    question: "Muss ich selbst in der Werbung auftreten?",
+    answer:
+      "Nein, das ist keine Voraussetzung. Wir erstellen die Kampagnen und Werbemittel in Ihrem Namen und mit Ihrem Branding. Falls gewünscht, können wir Sie aber gezielt als Experte in Ihrer Region positionieren, was die Wirkung zusätzlich verstärkt.",
+  },
+  {
+    question: "Was passiert, wenn die vereinbarten Ziele nicht erreicht werden?",
+    answer:
+      "Wenn eine Garantie vertraglich vereinbart wurde, arbeiten wir ohne zusätzliches Honorar weiter, bis das definierte Ziel erreicht ist. Das Werbebudget trägt weiterhin der Kunde. Unser Ziel ist es, langfristige Partnerschaften aufzubauen, keine kurzfristigen Verträge.",
+  },
+  {
+    question: "Arbeitet ihr mit Maklern in jeder Region?",
+    answer:
+      "Ja, wir arbeiten bundesweit mit Immobilienmaklern zusammen. Unsere Strategien werden individuell auf Ihre Region zugeschnitten. Um Interessenkonflikte zu vermeiden, betreuen wir pro Region nur eine begrenzte Anzahl an Maklern.",
   },
 ];
 
@@ -49,7 +64,7 @@ export default function FAQ() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border border-black/5 rounded-md overflow-hidden"
+              className="border border-black/5 rounded-md overflow-hidden bg-white"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}

@@ -55,40 +55,16 @@ export default function Hero() {
                 href="https://calendly.com/business-gruender/analysegesprach-gruender-marketing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 bg-primary hover:bg-primary/85 text-white px-7 py-4 rounded-sm text-base font-semibold transition-all hover:shadow-xl hover:shadow-primary/15 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center bg-primary hover:bg-primary/85 text-white px-7 py-4 rounded-sm text-base font-semibold transition-all hover:shadow-xl hover:shadow-primary/15 hover:-translate-y-0.5"
               >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
-                </svg>
                 Kostenlose Analyse sichern
               </a>
               <a
                 href="#loesung"
-                className="inline-flex items-center justify-center gap-2 border border-primary/15 text-primary/60 hover:border-accent hover:text-accent px-7 py-4 rounded-sm text-base font-semibold transition-all"
+                className="inline-flex items-center justify-center border border-primary/15 text-primary/60 hover:border-accent hover:text-accent px-7 py-4 rounded-sm text-base font-semibold transition-all"
               >
                 Mehr erfahren
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
               </a>
-            </div>
-
-            {/* Trust */}
-            <div className="flex flex-wrap items-center gap-6 mt-12 pt-8 border-t border-primary/5 animate-fade-in-up animation-delay-600">
-              <div className="text-center">
-                <span className="block text-2xl font-bold text-accent">30+</span>
-                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Anfragen/Monat</span>
-              </div>
-              <div className="w-px h-8 bg-primary/10" />
-              <div className="text-center">
-                <span className="block text-2xl font-bold text-accent">100%</span>
-                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Individuell</span>
-              </div>
-              <div className="w-px h-8 bg-primary/10" />
-              <div className="text-center">
-                <span className="block text-2xl font-bold text-accent">KI</span>
-                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Gestützt</span>
-              </div>
             </div>
           </div>
 

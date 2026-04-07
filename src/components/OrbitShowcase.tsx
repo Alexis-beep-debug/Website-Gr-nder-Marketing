@@ -112,8 +112,8 @@ export default function OrbitShowcase() {
                     </div>
                     <span className="text-xs font-semibold text-primary/70">{item.label}</span>
                   </div>
-                  {/* Mobile: icon only */}
-                  <div className="sm:hidden w-11 h-11 bg-white shadow-md border border-accent/15 rounded-full flex items-center justify-center text-accent">
+                  {/* Mobile: icon in circle, same rotation */}
+                  <div className="sm:hidden w-12 h-12 bg-white shadow-md border border-accent/15 rounded-full flex items-center justify-center text-accent">
                     {item.icon}
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export default function OrbitShowcase() {
 
           {/* Center logo */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-gradient-to-br from-accent/15 to-accent/5 rounded-full flex items-center justify-center border-2 border-accent/25 shadow-lg shadow-accent/10">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full flex items-center justify-center border-2 border-accent/15">
               <img
                 src="/images/logos/logo.png"
                 alt="Gründer Marketing Logo"

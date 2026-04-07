@@ -74,22 +74,46 @@ export default function About() {
           </div>
         </div>
 
-        {/* Mission */}
-        <div className="bg-accent/[0.06] border border-accent/15 rounded-md sm:rounded-md p-6 sm:p-10 md:p-14 text-center mb-14 sm:mb-20">
-          <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full">
-            Unsere Mission
-          </span>
-          <h3 className="text-2xl sm:text-3xl font-bold text-primary mt-3 mb-6">
-            Immobilienmakler zukunftsstark.
-          </h3>
-          <p className="text-primary/60 leading-relaxed max-w-3xl mx-auto text-lg">
-            Gründer Marketing wurde ins Leben gerufen, um Immobilienmakler als
-            professioneller Partner an der Seite zu unterstützen, weil der
-            Objektzulauf eingebrochen ist und die aktuellen Akquisemaßnahmen
-            allein nicht mehr reichen. Wir helfen ihnen dabei, Alleinaufträge zu
-            bekommen, damit ihr Geschäft wieder läuft und sie sich auf ihr
-            Spezialgebiet konzentrieren können: Die Betreuung ihrer Kunden.
-          </p>
+        {/* Mission – with animated marquee */}
+        <div className="relative bg-primary rounded-md overflow-hidden p-6 sm:p-10 md:p-14 text-center mb-14 sm:mb-20">
+          {/* Animated background words */}
+          <div className="absolute inset-0 flex flex-col justify-center gap-6 opacity-[0.04] pointer-events-none overflow-hidden">
+            <div className="flex gap-8 whitespace-nowrap animate-marquee text-6xl sm:text-8xl font-extrabold text-white">
+              <span>ZUKUNFTSSTARK</span>
+              <span>PLANBAR</span>
+              <span>DIGITAL</span>
+              <span>WACHSTUM</span>
+              <span>ZUKUNFTSSTARK</span>
+              <span>PLANBAR</span>
+              <span>DIGITAL</span>
+              <span>WACHSTUM</span>
+            </div>
+            <div className="flex gap-8 whitespace-nowrap animate-marquee-reverse text-6xl sm:text-8xl font-extrabold text-white">
+              <span>SICHTBARKEIT</span>
+              <span>ALLEINAUFTRÄGE</span>
+              <span>ERFOLG</span>
+              <span>VERTRAUEN</span>
+              <span>SICHTBARKEIT</span>
+              <span>ALLEINAUFTRÄGE</span>
+              <span>ERFOLG</span>
+              <span>VERTRAUEN</span>
+            </div>
+          </div>
+
+          <div className="relative z-10">
+            <span className="inline-block bg-white/10 text-accent-light text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4 backdrop-blur-sm">
+              Unsere Mission
+            </span>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
+              Immobilienmakler zukunftsstark.
+            </h3>
+            <p className="text-white/55 leading-relaxed max-w-3xl mx-auto text-base sm:text-lg">
+              Gründer Marketing wurde ins Leben gerufen, um Immobilienmakler als
+              professioneller Partner an der Seite zu unterstützen. Wir helfen
+              dabei, Alleinaufträge zu gewinnen, damit Ihr Geschäft planbar wächst
+              und Sie sich auf Ihre Kunden konzentrieren können.
+            </p>
+          </div>
         </div>
 
         {/* Qualities */}
