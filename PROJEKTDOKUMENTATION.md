@@ -220,14 +220,24 @@
 | 06.04.2026 | Challenges-Hintergrund auf #f5f5f5 (einheitlich mit Rest der Seite) |
 | 06.04.2026 | Timeline: Scroll-Sync direkt an Timeline-Bereich gekoppelt (schneller), Mobile links ausgerichtet |
 | 06.04.2026 | Orbit: Mobile zeigt echten Kreis (verkleinert, Icons only) statt Grid-Fallback |
+| 07.04.2026 | Hero: Neues Bild (malte-deckblatt-neu.png), harmonisches Layout, Eigentümer-fokussierte Subheadline |
+| 07.04.2026 | Neue Vergleichssektion: Andere Agenturen vs. Gründer Marketing |
+| 07.04.2026 | Orbit: Neue Begriffe (Performance Marketing, Vertrauensaufbau, Qualifizierte Anfragen), mehr Grün/Verläufe |
+| 07.04.2026 | Timeline: Neues Bild 1 (timeline1-neu.avif), dickere Linie (3px), exakter Scroll-Sync |
+| 07.04.2026 | KPI: 25 → 15 Partnermakler |
+| 07.04.2026 | Datenschutz: Google Ads/ChatGPT entfernt, Claude AI/Close CRM/Google Docs ergänzt, Hosting auf Railway |
+| 07.04.2026 | AGB: Lead-Definition präzisiert, Garantieumfang klargestellt, Nachbesserung konkretisiert |
+| 07.04.2026 | Texte: Alle Subheadlines gekürzt, Bindestriche entfernt, natürlichere Formulierungen |
 
 ### Bilder-Inventar
 
 | Datei | Verwendung |
 |-------|-----------|
-| `public/images/team/malte-deckblatt.png` | Hero-Hintergrundbild |
+| `public/images/team/malte-deckblatt-neu.png` | Hero-Hintergrundbild (aktuell) |
+| `public/images/team/malte-deckblatt.png` | Hero-Hintergrundbild (alt) |
 | `public/images/team/malte-ueber-uns.png` | Über-uns-Sektion |
-| `public/images/team/timeline1.png` | Timeline Step 01 |
+| `public/images/team/timeline1-neu.avif` | Timeline Step 01 (aktuell) |
+| `public/images/team/timeline1.png` | Timeline Step 01 (alt) |
 | `public/images/team/timeline2.jpg` | Timeline Step 02 |
 | `public/images/team/timeline3.jpg` | Timeline Step 03 |
 | `public/images/logos/logo.png` | Header, Footer, Orbit-Zentrum |
@@ -257,10 +267,14 @@
 - [x] Hintergrundfarbe unter Hero vereinheitlicht
 - [x] Timeline Mobile: links ausgerichtet mit vertikaler Linie
 - [x] Orbit Mobile: Kreis-Darstellung statt Grid
+- [x] Vergleichssektion: Andere Agenturen vs. Gründer Marketing
+- [x] Datenschutz: Claude AI, Close CRM, Google Docs statt Google Ads/ChatGPT
+- [x] AGB: Lead-Definition, Garantieumfang, Nachbesserung präzisiert
+- [x] Alle Subheadlines gekürzt und Bindestriche entfernt
 - [ ] Kontaktformular integrieren (optional)
 - [ ] Google Analytics / Meta Pixel einrichten (produktiv)
 - [ ] Cookie-Banner implementieren
 
 ---
 
-*Letzte Aktualisierung: 06.04.2026 (v2)*
+*Letzte Aktualisierung: 07.04.2026*
