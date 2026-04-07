@@ -177,8 +177,38 @@ body {
   box-shadow: 0 4px 12px rgba(91, 125, 115, 0.08);
   transform: translate(-50%, -50%);
 }
-@media (min-width: 640px) {
-  .orbit-icon { width: 48px; height: 48px; }
+/* Desktop: label card with icon + text */
+.orbit-label-card {
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid rgba(91, 125, 115, 0.15);
+  border-radius: 12px;
+  padding: 8px 14px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(91, 125, 115, 0.08);
+}
+.orbit-label-card:hover {
+  box-shadow: 0 8px 24px rgba(91, 125, 115, 0.12);
+  border-color: rgba(91, 125, 115, 0.3);
+}
+.orbit-label-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(91, 125, 115, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5B7D73;
+  flex-shrink: 0;
+}
+.orbit-label-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
 }
 .orbit-center {
   position: absolute;

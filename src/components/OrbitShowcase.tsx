@@ -77,57 +77,99 @@ export default function OrbitShowcase() {
           </p>
         </div>
 
-        {/* Orbit – all screen sizes use same structure */}
-        <div className="orbit-container">
-          {/* Orbit rings */}
-          <div className="orbit-ring orbit-ring-outer" />
-          <div className="orbit-ring orbit-ring-inner" />
+        {/* Desktop: Orbit with labels attached to icons */}
+        <div className="hidden sm:block">
+          <div className="orbit-container">
+            <div className="orbit-ring orbit-ring-outer" />
+            <div className="orbit-ring orbit-ring-inner" />
+            <div className="orbit-glow" />
 
-          {/* Glow */}
-          <div className="orbit-glow" />
+            <div className="orbit-spinner">
+              {orbitItems.map((item, i) => {
+                const angle = (i * 360) / orbitItems.length - 90;
+                const rad = (angle * Math.PI) / 180;
+                const radius = 42;
+                const x = 50 + radius * Math.cos(rad);
+                const y = 50 + radius * Math.sin(rad);
 
-          {/* Rotating items */}
-          <div className="orbit-spinner">
-            {orbitItems.map((item, i) => {
-              const angle = (i * 360) / orbitItems.length - 90;
-              const rad = (angle * Math.PI) / 180;
-              const radius = 42;
-              const x = 50 + radius * Math.cos(rad);
-              const y = 50 + radius * Math.sin(rad);
-
-              return (
-                <div
-                  key={i}
-                  className="orbit-item"
-                  style={{ left: `${x}%`, top: `${y}%` }}
-                >
-                  <div className="orbit-icon">
-                    {item.icon}
+                return (
+                  <div
+                    key={i}
+                    className="orbit-item"
+                    style={{ left: `${x}%`, top: `${y}%` }}
+                  >
+                    {/* Icon + label together, counter-rotate to stay readable */}
+                    <div className="orbit-label-card">
+                      <div className="orbit-label-icon">
+                        {item.icon}
+                      </div>
+                      <span className="orbit-label-text">{item.label}</span>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
 
-          {/* Center logo */}
-          <div className="orbit-center">
-            <div className="orbit-center-inner">
-              <img
-                src="/images/logos/logo.png"
-                alt="Gründer Marketing Logo"
-                className="orbit-center-logo"
-              />
+            <div className="orbit-center">
+              <div className="orbit-center-inner">
+                <img
+                  src="/images/logos/logo.png"
+                  alt="Gründer Marketing Logo"
+                  className="orbit-center-logo"
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Labels below */}
-        <div className="flex flex-wrap justify-center gap-2 mt-10">
-          {orbitItems.map((item, i) => (
-            <span key={i} className="bg-accent/10 text-accent text-[10px] sm:text-xs font-semibold px-3 py-1.5 rounded-full">
-              {item.label}
-            </span>
-          ))}
+        {/* Mobile: Orbit with icons only, labels below */}
+        <div className="sm:hidden">
+          <div className="orbit-container">
+            <div className="orbit-ring orbit-ring-outer" />
+            <div className="orbit-ring orbit-ring-inner" />
+            <div className="orbit-glow" />
+
+            <div className="orbit-spinner">
+              {orbitItems.map((item, i) => {
+                const angle = (i * 360) / orbitItems.length - 90;
+                const rad = (angle * Math.PI) / 180;
+                const radius = 42;
+                const x = 50 + radius * Math.cos(rad);
+                const y = 50 + radius * Math.sin(rad);
+
+                return (
+                  <div
+                    key={i}
+                    className="orbit-item"
+                    style={{ left: `${x}%`, top: `${y}%` }}
+                  >
+                    <div className="orbit-icon">
+                      {item.icon}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="orbit-center">
+              <div className="orbit-center-inner">
+                <img
+                  src="/images/logos/logo.png"
+                  alt="Gründer Marketing Logo"
+                  className="orbit-center-logo"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile labels below */}
+          <div className="flex flex-wrap justify-center gap-2 mt-8">
+            {orbitItems.map((item, i) => (
+              <span key={i} className="bg-accent/10 text-accent text-[10px] font-semibold px-3 py-1.5 rounded-full">
+                {item.label}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

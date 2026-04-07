@@ -74,7 +74,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Mission – with connection diagram */}
+        {/* Mission – Flow: Makler → Gründer Marketing → Ergebnisse */}
         <div className="relative bg-[#f5f5f5] rounded-md overflow-hidden p-6 sm:p-10 md:p-14 mb-14 sm:mb-20">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Left: Text */}
@@ -93,58 +93,64 @@ export default function About() {
               </p>
             </div>
 
-            {/* Right: Connection diagram */}
-            <div className="relative w-full max-w-[320px] mx-auto aspect-square">
-              {/* Connection lines SVG */}
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 320" fill="none">
-                {/* Vertical line from Makler to Strategie */}
-                <line x1="160" y1="70" x2="160" y2="140" stroke="#5B7D73" strokeWidth="2" strokeDasharray="200" className="animate-draw-line" />
-                {/* Line from Strategie to Gründer Marketing */}
-                <line x1="160" y1="180" x2="240" y2="240" stroke="#5B7D73" strokeWidth="2" strokeDasharray="200" className="animate-draw-line" style={{ animationDelay: "0.5s" }} />
-                {/* Line from Strategie to Eigentümer */}
-                <line x1="160" y1="180" x2="80" y2="240" stroke="#5B7D73" strokeWidth="2" strokeDasharray="200" className="animate-draw-line" style={{ animationDelay: "1s" }} />
-                {/* Dots at intersections */}
-                <circle cx="160" cy="110" r="4" fill="#5B7D73" opacity="0.4" />
-                <circle cx="200" cy="210" r="3" fill="#5B7D73" opacity="0.3" />
-                <circle cx="120" cy="210" r="3" fill="#5B7D73" opacity="0.3" />
+            {/* Right: Vertical flow diagram */}
+            <div className="relative w-full max-w-[280px] mx-auto">
+              {/* SVG flow lines */}
+              <svg className="absolute left-1/2 top-0 h-full w-4 -translate-x-1/2 z-0" viewBox="0 0 16 400" fill="none" preserveAspectRatio="none">
+                <line x1="8" y1="60" x2="8" y2="150" stroke="#5B7D73" strokeWidth="2" strokeDasharray="4 4" opacity="0.3" />
+                <line x1="8" y1="210" x2="8" y2="290" stroke="#5B7D73" strokeWidth="2" strokeDasharray="4 4" opacity="0.3" />
+                {/* Animated pulse dot going down */}
+                <circle r="4" fill="#5B7D73" opacity="0.6">
+                  <animateMotion dur="3s" repeatCount="indefinite" path="M 8,60 L 8,290" />
+                </circle>
               </svg>
 
-              {/* Box: Makler (top) */}
-              <div className="absolute top-[5%] left-1/2 -translate-x-1/2 animate-float">
-                <div className="bg-white rounded-lg shadow-md border border-primary/8 px-4 py-3 text-center">
-                  <svg className="w-6 h-6 text-accent mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              {/* Step 1: Makler (top) */}
+              <div className="relative z-10 flex justify-center mb-6">
+                <div className="bg-white rounded-lg shadow-md border border-primary/8 px-6 py-4 text-center">
+                  <svg className="w-7 h-7 text-accent mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
-                  <span className="text-[11px] font-semibold text-primary/70">Makler</span>
+                  <span className="text-sm font-semibold text-primary">Makler</span>
                 </div>
               </div>
 
-              {/* Box: Strategie (center) */}
-              <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: "1s" }}>
-                <div className="bg-white rounded-lg shadow-md border border-primary/8 px-5 py-3 text-center">
-                  <svg className="w-6 h-6 text-accent mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                  </svg>
-                  <span className="text-[11px] font-semibold text-primary/70">Strategie</span>
+              {/* Arrow down */}
+              <div className="flex justify-center mb-6">
+                <svg className="w-5 h-5 text-accent animate-bounce" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" style={{ animationDuration: "2s" }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                </svg>
+              </div>
+
+              {/* Step 2: Gründer Marketing (center) */}
+              <div className="relative z-10 flex justify-center mb-6">
+                <div className="bg-primary rounded-lg shadow-lg px-6 py-4 text-center">
+                  <img src="/images/logos/logo.png" alt="Gründer Marketing" className="w-10 h-auto mx-auto mb-2 brightness-0 invert" />
+                  <span className="text-sm font-semibold text-white">Gründer Marketing</span>
                 </div>
               </div>
 
-              {/* Box: Eigentümer (bottom left) */}
-              <div className="absolute bottom-[8%] left-[10%] animate-float" style={{ animationDelay: "2s" }}>
-                <div className="bg-white rounded-lg shadow-md border border-primary/8 px-4 py-3 text-center">
-                  <svg className="w-6 h-6 text-accent mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                  <span className="text-[11px] font-semibold text-primary/70">Eigentümer</span>
-                </div>
+              {/* Arrow down */}
+              <div className="flex justify-center mb-6">
+                <svg className="w-5 h-5 text-accent animate-bounce" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" style={{ animationDuration: "2s", animationDelay: "0.5s" }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                </svg>
               </div>
 
-              {/* Box: Gründer Marketing (bottom right) */}
-              <div className="absolute bottom-[8%] right-[5%] animate-float" style={{ animationDelay: "1.5s" }}>
-                <div className="bg-primary rounded-lg shadow-lg px-4 py-3 text-center">
-                  <img src="/images/logos/logo.png" alt="Gründer Marketing" className="w-8 h-auto mx-auto mb-1 brightness-0 invert" />
-                  <span className="text-[10px] font-semibold text-white/70">Gründer Marketing</span>
-                </div>
+              {/* Step 3: Ergebnisse (bottom) */}
+              <div className="relative z-10 space-y-3">
+                {[
+                  { text: "Planbare Aufträge", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+                  { text: "Keine Auftragsnot", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+                  { text: "Mehr Zeit fürs Kerngeschäft", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+                ].map((result, i) => (
+                  <div key={i} className="flex items-center gap-3 bg-accent/8 border border-accent/15 rounded-lg px-4 py-3 animate-float" style={{ animationDelay: `${i * 0.3}s` }}>
+                    <svg className="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d={result.icon} />
+                    </svg>
+                    <span className="text-sm font-medium text-primary/70">{result.text}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
