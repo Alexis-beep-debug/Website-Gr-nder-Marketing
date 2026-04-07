@@ -74,49 +74,79 @@ export default function About() {
           </div>
         </div>
 
-        {/* Mission – with animated marquee */}
-        <div className="relative bg-primary rounded-md overflow-hidden p-6 sm:p-10 md:p-14 text-center mb-14 sm:mb-20">
-          {/* Animated background words */}
-          <div className="absolute inset-0 flex flex-col justify-center gap-6 opacity-[0.04] pointer-events-none overflow-hidden">
-            <div className="flex gap-8 whitespace-nowrap animate-marquee text-6xl sm:text-8xl font-extrabold text-white">
-              <span>ZUKUNFTSSTARK</span>
-              <span>PLANBAR</span>
-              <span>DIGITAL</span>
-              <span>WACHSTUM</span>
-              <span>ZUKUNFTSSTARK</span>
-              <span>PLANBAR</span>
-              <span>DIGITAL</span>
-              <span>WACHSTUM</span>
+        {/* Mission – with connection diagram */}
+        <div className="relative bg-[#f5f5f5] rounded-md overflow-hidden p-6 sm:p-10 md:p-14 mb-14 sm:mb-20">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            {/* Left: Text */}
+            <div className="text-center lg:text-left">
+              <span className="inline-block bg-accent/15 text-accent text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4">
+                Unsere Mission
+              </span>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mt-2 mb-6">
+                Immobilienmakler zukunftsstark.
+              </h3>
+              <p className="text-primary/50 leading-relaxed text-base sm:text-lg">
+                Gründer Marketing wurde ins Leben gerufen, um Immobilienmakler als
+                professioneller Partner an der Seite zu unterstützen. Wir helfen
+                dabei, Alleinaufträge zu gewinnen, damit Ihr Geschäft planbar wächst
+                und Sie sich auf Ihre Kunden konzentrieren können.
+              </p>
             </div>
-            <div className="flex gap-8 whitespace-nowrap animate-marquee-reverse text-6xl sm:text-8xl font-extrabold text-white">
-              <span>SICHTBARKEIT</span>
-              <span>ALLEINAUFTRÄGE</span>
-              <span>ERFOLG</span>
-              <span>VERTRAUEN</span>
-              <span>SICHTBARKEIT</span>
-              <span>ALLEINAUFTRÄGE</span>
-              <span>ERFOLG</span>
-              <span>VERTRAUEN</span>
+
+            {/* Right: Connection diagram */}
+            <div className="relative w-full max-w-[320px] mx-auto aspect-square">
+              {/* Connection lines SVG */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 320" fill="none">
+                {/* Vertical line from Makler to Strategie */}
+                <line x1="160" y1="70" x2="160" y2="140" stroke="#5B7D73" strokeWidth="2" strokeDasharray="200" className="animate-draw-line" />
+                {/* Line from Strategie to Gründer Marketing */}
+                <line x1="160" y1="180" x2="240" y2="240" stroke="#5B7D73" strokeWidth="2" strokeDasharray="200" className="animate-draw-line" style={{ animationDelay: "0.5s" }} />
+                {/* Line from Strategie to Eigentümer */}
+                <line x1="160" y1="180" x2="80" y2="240" stroke="#5B7D73" strokeWidth="2" strokeDasharray="200" className="animate-draw-line" style={{ animationDelay: "1s" }} />
+                {/* Dots at intersections */}
+                <circle cx="160" cy="110" r="4" fill="#5B7D73" opacity="0.4" />
+                <circle cx="200" cy="210" r="3" fill="#5B7D73" opacity="0.3" />
+                <circle cx="120" cy="210" r="3" fill="#5B7D73" opacity="0.3" />
+              </svg>
+
+              {/* Box: Makler (top) */}
+              <div className="absolute top-[5%] left-1/2 -translate-x-1/2 animate-float">
+                <div className="bg-white rounded-lg shadow-md border border-primary/8 px-4 py-3 text-center">
+                  <svg className="w-6 h-6 text-accent mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                  <span className="text-[11px] font-semibold text-primary/70">Makler</span>
+                </div>
+              </div>
+
+              {/* Box: Strategie (center) */}
+              <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 animate-float" style={{ animationDelay: "1s" }}>
+                <div className="bg-white rounded-lg shadow-md border border-primary/8 px-5 py-3 text-center">
+                  <svg className="w-6 h-6 text-accent mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                  </svg>
+                  <span className="text-[11px] font-semibold text-primary/70">Strategie</span>
+                </div>
+              </div>
+
+              {/* Box: Eigentümer (bottom left) */}
+              <div className="absolute bottom-[8%] left-[10%] animate-float" style={{ animationDelay: "2s" }}>
+                <div className="bg-white rounded-lg shadow-md border border-primary/8 px-4 py-3 text-center">
+                  <svg className="w-6 h-6 text-accent mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  <span className="text-[11px] font-semibold text-primary/70">Eigentümer</span>
+                </div>
+              </div>
+
+              {/* Box: Gründer Marketing (bottom right) */}
+              <div className="absolute bottom-[8%] right-[5%] animate-float" style={{ animationDelay: "1.5s" }}>
+                <div className="bg-primary rounded-lg shadow-lg px-4 py-3 text-center">
+                  <img src="/images/logos/logo.png" alt="Gründer Marketing" className="w-8 h-auto mx-auto mb-1 brightness-0 invert" />
+                  <span className="text-[10px] font-semibold text-white/70">Gründer Marketing</span>
+                </div>
+              </div>
             </div>
-          </div>
-
-          {/* Decorative glows */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: "6s" }} />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/8 rounded-full blur-[80px] animate-pulse" style={{ animationDuration: "8s", animationDelay: "3s" }} />
-
-          <div className="relative z-10">
-            <span className="inline-block bg-white/10 text-accent-light text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4 backdrop-blur-sm">
-              Unsere Mission
-            </span>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
-              Immobilienmakler zukunftsstark.
-            </h3>
-            <p className="text-white/55 leading-relaxed max-w-3xl mx-auto text-base sm:text-lg">
-              Gründer Marketing wurde ins Leben gerufen, um Immobilienmakler als
-              professioneller Partner an der Seite zu unterstützen. Wir helfen
-              dabei, Alleinaufträge zu gewinnen, damit Ihr Geschäft planbar wächst
-              und Sie sich auf Ihre Kunden konzentrieren können.
-            </p>
           </div>
         </div>
 

@@ -122,3 +122,109 @@ body {
 .animate-shake {
   animation: shake 0.5s ease-in-out;
 }
+
+/* Orbit component */
+.orbit-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .orbit-container { width: 450px; height: 450px; }
+}
+@media (min-width: 1024px) {
+  .orbit-container { width: 580px; height: 580px; }
+}
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+}
+.orbit-ring-outer {
+  inset: 6%;
+  border: 1px dashed rgba(91, 125, 115, 0.12);
+}
+.orbit-ring-inner {
+  inset: 20%;
+  border: 1px solid rgba(91, 125, 115, 0.15);
+}
+.orbit-glow {
+  position: absolute;
+  inset: 28%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91,125,115,0.08), transparent);
+  filter: blur(20px);
+}
+.orbit-spinner {
+  position: absolute;
+  inset: 0;
+  animation: orbit 45s linear infinite;
+}
+.orbit-item {
+  position: absolute;
+  animation: orbit-counter 45s linear infinite;
+}
+.orbit-icon {
+  width: 44px;
+  height: 44px;
+  background: white;
+  border: 1px solid rgba(91, 125, 115, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5B7D73;
+  box-shadow: 0 4px 12px rgba(91, 125, 115, 0.08);
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 640px) {
+  .orbit-icon { width: 48px; height: 48px; }
+}
+.orbit-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.orbit-center-inner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid rgba(91, 125, 115, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .orbit-center-inner { width: 110px; height: 110px; }
+}
+@media (min-width: 1024px) {
+  .orbit-center-inner { width: 140px; height: 140px; }
+}
+.orbit-center-logo {
+  width: 48px;
+  height: auto;
+}
+@media (min-width: 640px) {
+  .orbit-center-logo { width: 68px; }
+}
+@media (min-width: 1024px) {
+  .orbit-center-logo { width: 88px; }
+}
+
+/* Connection lines animation for Mission */
+@keyframes draw-line {
+  from { stroke-dashoffset: 200; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes float-box {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-draw-line {
+  animation: draw-line 2s ease-out forwards;
+}
+.animate-float {
+  animation: float-box 4s ease-in-out infinite;
+}
