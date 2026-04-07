@@ -100,6 +100,10 @@ export default function About() {
             </div>
           </div>
 
+          {/* Decorative glows */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: "6s" }} />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/8 rounded-full blur-[80px] animate-pulse" style={{ animationDuration: "8s", animationDelay: "3s" }} />
+
           <div className="relative z-10">
             <span className="inline-block bg-white/10 text-accent-light text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-4 backdrop-blur-sm">
               Unsere Mission

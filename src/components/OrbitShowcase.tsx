@@ -51,6 +51,40 @@ const orbitItems = [
   },
 ];
 
+function OrbitRing({ items, radius, size }: { items: typeof orbitItems; radius: number; size: "sm" | "lg" }) {
+  return (
+    <div className="absolute inset-0 animate-orbit">
+      {items.map((item, i) => {
+        const angle = (i * 360) / items.length - 90;
+        const rad = (angle * Math.PI) / 180;
+        const x = 50 + radius * Math.cos(rad);
+        const y = 50 + radius * Math.sin(rad);
+
+        return (
+          <div
+            key={i}
+            className="absolute animate-orbit-counter"
+            style={{ left: `${x}%`, top: `${y}%` }}
+          >
+            {size === "lg" ? (
+              <div className="bg-white shadow-lg shadow-accent/5 border border-accent/15 rounded-xl px-4 py-3 flex items-center gap-2.5 whitespace-nowrap hover:shadow-xl hover:border-accent/40 transition-all duration-300 group cursor-default">
+                <div className="w-8 h-8 bg-gradient-to-br from-accent/15 to-accent/5 rounded-lg flex items-center justify-center text-accent shrink-0 group-hover:from-accent group-hover:to-accent-light group-hover:text-white transition-all duration-300">
+                  {item.icon}
+                </div>
+                <span className="text-xs font-semibold text-primary/70">{item.label}</span>
+              </div>
+            ) : (
+              <div className="w-12 h-12 bg-white shadow-md border border-accent/15 rounded-full flex items-center justify-center text-accent">
+                {item.icon}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function OrbitShowcase() {
   return (
     <section className="py-24 sm:py-32 bg-white overflow-hidden">
@@ -77,63 +111,39 @@ export default function OrbitShowcase() {
           </p>
         </div>
 
-        {/* Orbit visualization */}
-        <div className="relative mx-auto w-full max-w-[340px] sm:max-w-[480px] lg:max-w-[620px] aspect-square">
-          {/* Orbit rings with green gradient */}
-          <div className="absolute inset-[8%] rounded-full border border-accent/20" />
+        {/* Orbit – unified for all screen sizes */}
+        <div className="relative mx-auto w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[620px] lg:h-[620px]">
+          {/* Orbit rings */}
           <div className="absolute inset-[6%] rounded-full border border-dashed border-accent/8" />
+          <div className="absolute inset-[8%] rounded-full border border-accent/20" />
           <div className="absolute inset-[22%] rounded-full border border-accent/12" />
 
-          {/* Subtle green glow */}
+          {/* Subtle glow */}
           <div className="absolute inset-[30%] rounded-full bg-gradient-to-br from-accent/8 to-accent/3 blur-xl" />
 
-          {/* Rotating container */}
-          <div className="absolute inset-0 animate-orbit">
-            {orbitItems.map((item, i) => {
-              const angle = (i * 360) / orbitItems.length - 90;
-              const rad = (angle * Math.PI) / 180;
-              const radius = 46;
-              const x = 50 + radius * Math.cos(rad);
-              const y = 50 + radius * Math.sin(rad);
+          {/* Mobile: icons only */}
+          <div className="sm:hidden">
+            <OrbitRing items={orbitItems} radius={42} size="sm" />
+          </div>
 
-              return (
-                <div
-                  key={i}
-                  className="absolute animate-orbit-counter"
-                  style={{
-                    left: `${x}%`,
-                    top: `${y}%`,
-                  }}
-                >
-                  {/* Desktop/Tablet: full label */}
-                  <div className="hidden sm:flex bg-white shadow-lg shadow-accent/5 border border-accent/15 rounded-xl px-4 py-3 items-center gap-2.5 whitespace-nowrap hover:shadow-xl hover:border-accent/40 transition-all duration-300 group cursor-default">
-                    <div className="w-8 h-8 bg-gradient-to-br from-accent/15 to-accent/5 rounded-lg flex items-center justify-center text-accent shrink-0 group-hover:from-accent group-hover:to-accent-light group-hover:text-white transition-all duration-300">
-                      {item.icon}
-                    </div>
-                    <span className="text-xs font-semibold text-primary/70">{item.label}</span>
-                  </div>
-                  {/* Mobile: icon in circle, same rotation */}
-                  <div className="sm:hidden w-12 h-12 bg-white shadow-md border border-accent/15 rounded-full flex items-center justify-center text-accent">
-                    {item.icon}
-                  </div>
-                </div>
-              );
-            })}
+          {/* Desktop/Tablet: full labels */}
+          <div className="hidden sm:block">
+            <OrbitRing items={orbitItems} radius={46} size="lg" />
           </div>
 
           {/* Center logo */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full flex items-center justify-center border-2 border-accent/15">
+            <div className="w-20 h-20 sm:w-28 sm:h-28 lg:w-36 lg:h-36 rounded-full flex items-center justify-center border-2 border-accent/15">
               <img
                 src="/images/logos/logo.png"
                 alt="Gründer Marketing Logo"
-                className="w-14 sm:w-20 lg:w-24 h-auto"
+                className="w-12 sm:w-18 lg:w-22 h-auto"
               />
             </div>
           </div>
         </div>
 
-        {/* Mobile labels */}
+        {/* Mobile labels below */}
         <div className="flex flex-wrap justify-center gap-2 mt-8 sm:hidden">
           {orbitItems.map((item, i) => (
             <span key={i} className="bg-accent/10 text-accent text-[10px] font-semibold px-3 py-1.5 rounded-full">
