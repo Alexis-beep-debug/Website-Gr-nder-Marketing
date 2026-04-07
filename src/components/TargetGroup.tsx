@@ -54,16 +54,16 @@ const targets = [
       </svg>
     ),
     situation: [
-      "Schwierig, neue Eigentümer als Kunden zu gewinnen",
-      "Wenig Online-Sichtbarkeit in der Region",
+      "Verwaltung allein wirft oft nicht genug ab",
+      "Wenig Online Sichtbarkeit in der Region",
       "Bestehende Website generiert keine Anfragen",
       "Kein klarer digitaler Auftritt oder Positionierung",
     ],
     wishes: [
-      "Stetiger Zuwachs an Verwaltungsobjekten",
-      "Professionelle Online-Präsenz als Vertrauensfaktor",
+      "Nebenbei planbar Objekte makeln und verkaufen",
+      "Zusätzliche Einnahmen durch Vermittlung generieren",
       "Automatisierte Anfragen über die eigene Website",
-      "Klare Positionierung gegenüber dem Wettbewerb",
+      "Professionelle Online Präsenz als Vertrauensfaktor",
     ],
   },
 ];
