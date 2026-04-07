@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background image - desktop only */}
       <div className="absolute inset-0 hidden lg:block">
         <img
-          src="/images/team/malte-deckblatt-neu.png"
+          src="/images/team/malte-deckblatt-v2.png"
           alt="Malte-Valentin Gründer"
           className="w-full h-full object-cover object-[70%_center]"
         />

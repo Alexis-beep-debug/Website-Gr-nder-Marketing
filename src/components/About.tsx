@@ -122,10 +122,10 @@ export default function About() {
                 </svg>
               </div>
 
-              {/* Step 2: Gründer Marketing (center) */}
+              {/* Step 2: Gründer Marketing (center) – green, not black */}
               <div className="relative z-10 flex justify-center mb-6">
-                <div className="bg-primary rounded-lg shadow-lg px-6 py-4 text-center">
-                  <img src="/images/logos/logo-white.svg" alt="Gründer Marketing" className="w-10 h-auto mx-auto mb-2 brightness-0 invert" />
+                <div className="bg-accent rounded-lg shadow-lg px-6 py-4 text-center">
+                  <img src="/images/logos/logo-white.svg" alt="Gründer Marketing" className="w-10 h-auto mx-auto mb-2" />
                   <span className="text-sm font-semibold text-white">Gründer Marketing</span>
                 </div>
               </div>
@@ -137,18 +137,18 @@ export default function About() {
                 </svg>
               </div>
 
-              {/* Step 3: Ergebnisse (bottom) */}
-              <div className="relative z-10 space-y-3">
+              {/* Step 3: Ergebnisse (bottom) – side by side, floating */}
+              <div className="relative z-10 grid grid-cols-3 gap-2">
                 {[
                   { text: "Planbare Aufträge", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
                   { text: "Keine Auftragsnot", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
-                  { text: "Mehr Zeit fürs Kerngeschäft", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+                  { text: "Mehr Zeit", icon: "M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
                 ].map((result, i) => (
-                  <div key={i} className="flex items-center gap-3 bg-accent/8 border border-accent/15 rounded-lg px-4 py-3 animate-float" style={{ animationDelay: `${i * 0.3}s` }}>
-                    <svg className="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                  <div key={i} className="bg-accent/8 border border-accent/15 rounded-lg p-3 text-center animate-float" style={{ animationDelay: `${i * 0.4}s` }}>
+                    <svg className="w-5 h-5 text-accent mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d={result.icon} />
                     </svg>
-                    <span className="text-sm font-medium text-primary/70">{result.text}</span>
+                    <span className="text-[10px] font-semibold text-primary/60">{result.text}</span>
                   </div>
                 ))}
               </div>
