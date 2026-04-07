@@ -45,7 +45,7 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
 }
 
 const stats = [
-  { value: 4, suffix: "", label: "Aktive Kampagnen", icon: "campaigns" },
+  { value: 6, suffix: "", label: "Aktive Kampagnen", icon: "campaigns" },
   { value: 30, suffix: "+", label: "Anfragen pro Monat", icon: "requests" },
   { value: 100, suffix: "%", label: "Kundenzufriedenheit", icon: "satisfaction" },
   { value: 15, suffix: "", label: "Partnermakler", icon: "partners" },

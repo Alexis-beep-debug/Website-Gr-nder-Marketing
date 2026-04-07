@@ -75,24 +75,11 @@ export default function About() {
               </p>
             </div>
 
-            <p className="text-muted leading-relaxed mb-6">
+            <p className="text-muted leading-relaxed">
               Dieses Branchenwissen kombiniert er mit Marketingexpertise und
               dem Einsatz modernster Tools. Als junger Gründer kennt er die
               neuesten Trends und wendet sie direkt für seine Kunden an.
             </p>
-
-            {/* Mini stats */}
-            <div className="flex gap-6">
-              <div className="text-center">
-                <span className="block text-2xl font-bold text-accent">10+</span>
-                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Jahre Erfahrung</span>
-              </div>
-              <div className="w-px bg-primary/10" />
-              <div className="text-center">
-                <span className="block text-2xl font-bold text-accent">2</span>
-                <span className="text-[10px] text-primary/40 uppercase tracking-wider">Branchen vereint</span>
-              </div>
-            </div>
           </div>
         </div>
 

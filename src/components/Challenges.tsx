@@ -53,9 +53,6 @@ export default function Challenges() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </div>
-                <div className="w-10 h-10 bg-accent/8 rounded-xl flex items-center justify-center text-accent">
-                  {challenge.icon}
-                </div>
               </div>
 
               <h3 className="relative text-xl sm:text-2xl font-bold text-primary mb-3">

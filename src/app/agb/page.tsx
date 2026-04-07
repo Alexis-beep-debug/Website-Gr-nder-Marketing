@@ -66,7 +66,7 @@ export default function AGBPage() {
             Diese AGB bilden zusammen mit dem Angebot oder der Auftragsbestätigung einen verbindlichen
             Vertrag zwischen dem Kunden und{" "}
             <Highlight>
-              Gründer Marketing, Malte-Valentin Gründer, Auftragswerk (Einzelunternehmen), Saarstr.{"\u00A0"}45,
+              Gründer Marketing, Malte-Valentin Gründer (Einzelunternehmen), Saarstr.{"\u00A0"}45,
               01189 Dresden
             </Highlight>
             {" "}(nachfolgend „Gründer Marketing"). Der Vertrag kommt zustande, sobald der Kunde das
