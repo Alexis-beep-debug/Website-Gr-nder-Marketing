@@ -7,7 +7,7 @@ const steps = [
     number: "01",
     title: "Regionale Marktpräsenz",
     description:
-      "Wir sorgen dafür, dass potenzielle Eigentümer in Ihrer Region Sie sehen, erkennen und Vertrauen aufbauen. Über digitale Kanäle bespielen wir Ihre Zielgruppe kontinuierlich, sodass Sie als erster Ansprechpartner wahrgenommen werden.",
+      "Wir etablieren Ihre digitale Präsenz in der Region. Eigentümer begegnen Ihnen auf Facebook und Instagram, lernen Sie als Experten kennen und bauen über die Zeit Vertrauen zu Ihnen auf.",
     image: "/images/team/timeline1-neu.avif",
     imageAlt: "Regionale Marktpräsenz aufbauen",
   },
@@ -15,7 +15,7 @@ const steps = [
     number: "02",
     title: "Qualifizierte Kontaktanfragen",
     description:
-      "Wir sprechen genau den Eigentümer an, den Sie auch in Ihrem Tagesgeschäft bereits erfolgreich betreuen. Über gezielte Kampagnen und optimierte Landeseiten generieren wir Anfragen von Ihrem idealen Kundenprofil.",
+      "Über gezielte Kampagnen erreichen wir Eigentümer, die verkaufen möchten. Die Interessenten füllen ein Formular aus und hinterlassen ihre Kontaktdaten. So landen fertige Anfragen direkt bei Ihnen.",
     image: "/images/team/timeline2.jpg",
     imageAlt: "Qualifizierte Leads generieren",
   },
@@ -23,7 +23,7 @@ const steps = [
     number: "03",
     title: "Zulauf und Wachstum",
     description:
-      "Die gewonnenen Kontaktanfragen überführen Sie in Geschäftsabschlüsse. Das sichert langfristigen Zulauf, messbares Wachstum und ein starkes Netzwerk an interessanten Kontakten.",
+      "Sie führen die Gespräche, machen die Termine und gewinnen die Aufträge. Mit jedem neuen Kontakt wächst Ihr Netzwerk und Ihr Geschäft wird planbarer.",
     image: "/images/team/timeline3.jpg",
     imageAlt: "Wachstum und Erfolg",
   },
