@@ -72,7 +72,7 @@ export default function Comparison() {
             </div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-md flex items-center justify-center">
-                <img src="/images/logos/logo.png" alt="Gründer Marketing" className="w-8 h-auto" />
+                <img src="/images/logos/logo-dark.svg" alt="Gründer Marketing" className="w-8 h-auto" />
               </div>
               <h3 className="text-lg font-bold text-accent">Gründer Marketing</h3>
             </div>

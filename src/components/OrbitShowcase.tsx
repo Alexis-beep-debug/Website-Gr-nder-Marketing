@@ -88,7 +88,7 @@ export default function OrbitShowcase() {
               {orbitItems.map((item, i) => {
                 const angle = (i * 360) / orbitItems.length - 90;
                 const rad = (angle * Math.PI) / 180;
-                const radius = 42;
+                const radius = 50;
                 const x = 50 + radius * Math.cos(rad);
                 const y = 50 + radius * Math.sin(rad);
 
@@ -98,7 +98,6 @@ export default function OrbitShowcase() {
                     className="orbit-item"
                     style={{ left: `${x}%`, top: `${y}%` }}
                   >
-                    {/* Icon + label together, counter-rotate to stay readable */}
                     <div className="orbit-label-card">
                       <div className="orbit-label-icon">
                         {item.icon}
@@ -113,7 +112,7 @@ export default function OrbitShowcase() {
             <div className="orbit-center">
               <div className="orbit-center-inner">
                 <img
-                  src="/images/logos/logo.png"
+                  src="/images/logos/logo-dark.svg"
                   alt="Gründer Marketing Logo"
                   className="orbit-center-logo"
                 />
@@ -133,7 +132,7 @@ export default function OrbitShowcase() {
               {orbitItems.map((item, i) => {
                 const angle = (i * 360) / orbitItems.length - 90;
                 const rad = (angle * Math.PI) / 180;
-                const radius = 42;
+                const radius = 50;
                 const x = 50 + radius * Math.cos(rad);
                 const y = 50 + radius * Math.sin(rad);
 
@@ -154,7 +153,7 @@ export default function OrbitShowcase() {
             <div className="orbit-center">
               <div className="orbit-center-inner">
                 <img
-                  src="/images/logos/logo.png"
+                  src="/images/logos/logo-dark.svg"
                   alt="Gründer Marketing Logo"
                   className="orbit-center-logo"
                 />

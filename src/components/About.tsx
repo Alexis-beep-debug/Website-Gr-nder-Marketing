@@ -125,7 +125,7 @@ export default function About() {
               {/* Step 2: Gründer Marketing (center) */}
               <div className="relative z-10 flex justify-center mb-6">
                 <div className="bg-primary rounded-lg shadow-lg px-6 py-4 text-center">
-                  <img src="/images/logos/logo.png" alt="Gründer Marketing" className="w-10 h-auto mx-auto mb-2 brightness-0 invert" />
+                  <img src="/images/logos/logo-white.svg" alt="Gründer Marketing" className="w-10 h-auto mx-auto mb-2 brightness-0 invert" />
                   <span className="text-sm font-semibold text-white">Gründer Marketing</span>
                 </div>
               </div>

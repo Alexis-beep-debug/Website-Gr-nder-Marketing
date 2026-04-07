@@ -11,11 +11,9 @@ export default function Logo({
     large: "h-14",
   };
 
-  // 1.png = green logo for light backgrounds
-  // 3.png = white logo for dark backgrounds
   const src = variant === "light"
-    ? "/images/team/3.png"
-    : "/images/team/1.png";
+    ? "/images/logos/logo-white.svg"
+    : "/images/logos/logo-dark.svg";
 
   return (
     <img
