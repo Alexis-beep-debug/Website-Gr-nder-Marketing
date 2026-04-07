@@ -21,39 +21,28 @@ export default function OrbitShowcase() {
 
     let angle = 0;
     let animId: number;
-    const speed = 0.15; // degrees per frame
+    const speed = 0.04; // degrees per frame – slow, elegant rotation
 
     const items = container.querySelectorAll<HTMLElement>(".orbit-el");
     const count = items.length;
-    const containerSize = container.offsetWidth;
-    const ringRadius = containerSize / 2; // outer ring = container edge
 
     function animate() {
       angle += speed;
+      const size = container!.offsetWidth;
+      const r = size / 2;
       items.forEach((item, i) => {
         const itemAngle = angle + (i * 360) / count;
         const rad = (itemAngle * Math.PI) / 180;
-        const x = ringRadius + (ringRadius - 24) * Math.cos(rad);
-        const y = ringRadius + (ringRadius - 24) * Math.sin(rad);
-        item.style.left = `${x}px`;
-        item.style.top = `${y}px`;
+        // Place exactly on the outer ring (radius = half container)
+        item.style.left = `${r + r * Math.cos(rad)}px`;
+        item.style.top = `${r + r * Math.sin(rad)}px`;
       });
       animId = requestAnimationFrame(animate);
     }
 
-    // Handle resize
-    const observer = new ResizeObserver(() => {
-      const newSize = container.offsetWidth;
-      if (newSize > 0) {
-        animate();
-      }
-    });
-    observer.observe(container);
-
     animate();
     return () => {
       cancelAnimationFrame(animId);
-      observer.disconnect();
     };
   }, []);
 
