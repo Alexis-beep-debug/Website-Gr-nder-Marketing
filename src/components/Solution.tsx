@@ -7,7 +7,7 @@ const steps = [
     number: "01",
     title: "Regionale Marktpräsenz",
     description:
-      "Etablierung Ihrer Immobilienkompetenz in der Marktregion. Wir gewährleisten eine durchgängige Sichtbarkeit bei den relevanten Eigentümern und Interessenten auf digitalen Kanälen.",
+      "Wir sorgen dafür, dass potenzielle Eigentümer in Ihrer Region Sie sehen, erkennen und Vertrauen aufbauen. Über digitale Kanäle bespielen wir Ihre Zielgruppe kontinuierlich, sodass Sie als erster Ansprechpartner wahrgenommen werden.",
     image: "/images/team/timeline1-neu.avif",
     imageAlt: "Regionale Marktpräsenz aufbauen",
   },
@@ -15,7 +15,7 @@ const steps = [
     number: "02",
     title: "Qualifizierte Kontaktanfragen",
     description:
-      "Entwicklung spezifischer Angebote zur Generierung qualifizierter Kontaktanfragen von den richtigen Kundenavataren. Die Konvertierung erfolgt auf speziell optimierten Landeseiten.",
+      "Wir sprechen genau den Eigentümer an, den Sie auch in Ihrem Tagesgeschäft bereits erfolgreich betreuen. Über gezielte Kampagnen und optimierte Landeseiten generieren wir Anfragen von Ihrem idealen Kundenprofil.",
     image: "/images/team/timeline2.jpg",
     imageAlt: "Qualifizierte Leads generieren",
   },
@@ -23,7 +23,7 @@ const steps = [
     number: "03",
     title: "Zulauf und Wachstum",
     description:
-      "Die gewonnenen qualifizierten Kontaktanfragen überführen Sie in Geschäftsabschlüsse. Dies sichert langfristigen Zulauf, messbares Wachstum und ein starkes Netzwerk an interessanten Kontakten.",
+      "Die gewonnenen Kontaktanfragen überführen Sie in Geschäftsabschlüsse. Das sichert langfristigen Zulauf, messbares Wachstum und ein starkes Netzwerk an interessanten Kontakten.",
     image: "/images/team/timeline3.jpg",
     imageAlt: "Wachstum und Erfolg",
   },
