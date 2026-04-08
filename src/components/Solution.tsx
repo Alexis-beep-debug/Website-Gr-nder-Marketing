@@ -7,7 +7,7 @@ const steps = [
     number: "01",
     title: "Regionale Marktpräsenz",
     description:
-      "Eigentümer in Ihrer Region sehen Sie digital. Ob auf Social Media oder über Werbeanzeigen, Sie tauchen dort auf, wo Ihre Zielgruppe unterwegs ist. So lernen die Leute Sie kennen, bevor sie überhaupt einen Makler suchen.",
+      "Wir bauen mit Ihnen Sichtbarkeit und Vertrauen auf digitalen Kanälen auf. Sie tauchen dort auf, wo Ihre Zielgruppe täglich unterwegs ist. So lernen Eigentümer Sie als Experten aus der Region kennen, lange bevor sie überhaupt einen Makler brauchen.",
     image: "/images/team/timeline1-neu.avif",
     imageAlt: "Regionale Marktpräsenz aufbauen",
   },
@@ -15,7 +15,7 @@ const steps = [
     number: "02",
     title: "Qualifizierte Kontaktanfragen",
     description:
-      "Eigentümer, die verkaufen wollen, melden sich bei Ihnen. Sie füllen ein Formular aus, hinterlassen ihre Daten und Sie bekommen eine fertige Anfrage. Kein Kaltanruf, kein Zufall.",
+      "Über die Anzeigen sprechen wir Eigentümer in konkreten Lebenssituationen an. Wir leiten sie auf passende Landeseiten, wo sie mit ihrem Thema abgeholt werden. Dort qualifizieren wir die Anfragen vor, sodass Sie fertige Kontakte mit allen relevanten Daten erhalten.",
     image: "/images/team/timeline2.jpg",
     imageAlt: "Qualifizierte Leads generieren",
   },
@@ -23,7 +23,7 @@ const steps = [
     number: "03",
     title: "Zulauf und Wachstum",
     description:
-      "Sie telefonieren, machen Termine und gewinnen Aufträge. Nebenbei bauen Sie sich ein Netzwerk an spannenden Kontakten auf, die auch in Zukunft für Ihr Geschäft relevant sind.",
+      "Sie erhalten jeden Monat einen planbaren Zufluss an qualifizierten Anfragen. Einige werden kurzfristig zum Auftrag, andere bauen Ihr Zukunftsnetzwerk auf. So sammeln Sie heute schon Marktanteile ein, bevor es die Konkurrenz tut.",
     image: "/images/team/timeline3.jpg",
     imageAlt: "Wachstum und Erfolg",
   },
